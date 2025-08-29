@@ -119,4 +119,44 @@ fi
 echo -e "   ${DIM}Status: %s | CAIA: %c | All commands: %${NC}"
 
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+# ========================================
+# 🧠 Start CAIA Real-time Learning System
+# ========================================
+echo -e "${YELLOW}🧠 Real-time Learning System:${NC}"
+
+# Check if learning system is already running
+LEARNING_STATUS=$(/Users/MAC/Documents/projects/caia/knowledge-system/scripts/quick_status.py 2>/dev/null | grep "Status:" | grep "ACTIVE" || echo "")
+
+if [ -z "$LEARNING_STATUS" ]; then
+    # Start the learning system in background
+    echo -e "   Status: ${YELLOW}Starting real-time learning...${NC}"
+    nohup /Users/MAC/Documents/projects/caia/knowledge-system/scripts/learning_control.sh start > /tmp/learning_system.log 2>&1 &
+    LEARNING_PID=$!
+    
+    # Wait for system to start
+    sleep 3
+    
+    # Verify it started
+    VERIFY_STATUS=$(/Users/MAC/Documents/projects/caia/knowledge-system/scripts/quick_status.py 2>/dev/null | grep "Status:" | grep "ACTIVE" || echo "")
+    if [ -n "$VERIFY_STATUS" ]; then
+        echo -e "   Status: ${GREEN}Learning System ACTIVE${NC} ${DIM}(PID: $LEARNING_PID)${NC}"
+        # Show stats
+        STATS=$(/Users/MAC/Documents/projects/caia/knowledge-system/scripts/quick_status.py 2>/dev/null | grep -E "(Total Interactions|Patterns Learned)" | sed 's/^/   /')
+        [ -n "$STATS" ] && echo -e "$STATS"
+    else
+        echo -e "   Status: ${YELLOW}Starting in background...${NC} ${DIM}(check /tmp/learning_system.log)${NC}"
+    fi
+else
+    echo -e "   Status: ${GREEN}Already Active${NC}"
+    # Show current learning stats
+    INTERACTIONS=$(/Users/MAC/Documents/projects/caia/knowledge-system/scripts/quick_status.py 2>/dev/null | grep "Total Interactions" | awk '{print $3}')
+    PATTERNS=$(/Users/MAC/Documents/projects/caia/knowledge-system/scripts/quick_status.py 2>/dev/null | grep "Patterns Learned" | awk '{print $3}')
+    [ -n "$INTERACTIONS" ] && echo -e "   Captured: ${GREEN}$INTERACTIONS${NC} interactions"
+    [ -n "$PATTERNS" ] && echo -e "   Learned: ${GREEN}$PATTERNS${NC} patterns"
+fi
+
+echo -e "   ${DIM}💭 Learning from your thinking patterns...${NC}"
+
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo -e "${GREEN}✓ Ready${NC} ${DIM}(session: $(date +%H:%M:%S))${NC}"
