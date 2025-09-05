@@ -1,0 +1,57 @@
+#!/bin/bash
+# Pre-prompt Capture Hook for Learning System
+# Captures user prompts and feeds them to the learning system
+
+# Get the prompt content (passed as argument)
+PROMPT="$*"
+TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
+
+# Capture to learning system via API
+if curl -s http://localhost:5002/api/cdm/record_prompt \
+  -H "Content-Type: application/json" \
+  -d "{\"prompt\": \"$PROMPT\", \"timestamp\": \"$TIMESTAMP\"}" > /dev/null 2>&1; then
+  echo "📝 Prompt captured for learning"
+fi
+
+# Also record in chat history database
+python3 << EOF
+import sqlite3
+from datetime import datetime
+
+try:
+    conn = sqlite3.connect('/Users/MAC/Documents/projects/caia/knowledge-system/data/chat_history.db')
+    cursor = conn.cursor()
+    
+    # Get or create session
+    cursor.execute('''INSERT OR IGNORE INTO chat_sessions (session_id, start_time) 
+                     VALUES (date('now'), datetime('now'))''')
+    
+    # Record interaction
+    cursor.execute('''INSERT INTO chat_interactions 
+                     (timestamp, input_text, session_id, type)
+                     VALUES (?, ?, date('now'), 'user_prompt')''',
+                  (datetime.now().isoformat(), '''$PROMPT'''))
+    
+    conn.commit()
+    conn.close()
+except Exception as e:
+    pass  # Silent fail to not interrupt CC
+EOF
+
+# Query CKS for relevant context BEFORE CC processes
+CONTEXT=$(curl -s -X POST http://localhost:5555/search/function \
+  -H "Content-Type: application/json" \
+  -d "{\"query\": \"$PROMPT\", \"limit\": 3}" 2>/dev/null | python3 -c "
+import sys, json
+try:
+    data = json.load(sys.stdin)
+    if data.get('results'):
+        print('💡 CKS Found relevant code:')
+        for r in data['results'][:2]:
+            print(f\"  • {r['name']} in {r['file'].split('/')[-1]}\")
+except: pass
+")
+
+if [ ! -z "$CONTEXT" ]; then
+  echo "$CONTEXT"
+fi

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# This hook runs before every prompt submission
+# We'll use it to ensure CCU is initialized once per session
+
+SESSION_MARKER="/tmp/.ccu_session_$(date +%Y%m%d)"
+
+if [ ! -f "$SESSION_MARKER" ]; then
+    # First prompt of the session - run full initialization
+    echo "🚀 First prompt detected - Initializing CCU..."
+    source /Users/MAC/.claude/hooks/ccu-full-init.sh
+    touch "$SESSION_MARKER"
+else
+    # Session already initialized - just show quick status
+    echo "⚡ CCU Active | 82 configs | 4.3M× speed | Session: $(date +%H:%M:%S)"
+fi

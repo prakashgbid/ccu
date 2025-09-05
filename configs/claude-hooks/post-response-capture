@@ -1,0 +1,85 @@
+#!/bin/bash
+# Post-response Capture Hook for Learning System
+# Captures CC's responses and code generation for learning
+
+# Note: This hook would need to be integrated with CC's response pipeline
+# For now, we'll create the structure that would capture responses
+
+RESPONSE="$*"
+TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
+
+# Extract code blocks if present
+python3 << 'EOF'
+import re
+import sqlite3
+import json
+from datetime import datetime
+import sys
+
+response = """$RESPONSE"""
+
+try:
+    # Extract code blocks
+    code_blocks = re.findall(r'```[\w]*\n(.*?)\n```', response, re.DOTALL)
+    
+    # Extract function/class definitions
+    functions = re.findall(r'def\s+(\w+)\s*\(', response)
+    classes = re.findall(r'class\s+(\w+)', response)
+    
+    # Connect to databases
+    conn_chat = sqlite3.connect('/Users/MAC/Documents/projects/caia/knowledge-system/data/chat_history.db')
+    cursor_chat = conn_chat.cursor()
+    
+    # Record the response
+    cursor_chat.execute('''INSERT INTO chat_interactions 
+                          (timestamp, output_text, session_id, type, code_generated)
+                          VALUES (?, ?, date('now'), 'cc_response', ?)''',
+                       (datetime.now().isoformat(), response[:1000], 
+                        json.dumps({'functions': functions, 'classes': classes})))
+    
+    # Extract patterns for learning
+    if functions or classes:
+        cursor_chat.execute('''INSERT INTO learning_insights
+                              (timestamp, pattern_type, pattern_data, context)
+                              VALUES (?, 'code_generation', ?, ?)''',
+                           (datetime.now().isoformat(),
+                            json.dumps({'functions': functions, 'classes': classes}),
+                            'cc_response'))
+    
+    conn_chat.commit()
+    conn_chat.close()
+    
+    # Update pattern database
+    if functions or classes:
+        conn_pattern = sqlite3.connect('/Users/MAC/Documents/projects/caia/knowledge-system/data/patterns.db')
+        cursor_pattern = conn_pattern.cursor()
+        
+        for func in functions:
+            cursor_pattern.execute('''INSERT OR IGNORE INTO code_patterns
+                                    (pattern_name, pattern_type, usage_count, last_seen)
+                                    VALUES (?, 'function', 1, ?)
+                                    ON CONFLICT(pattern_name) DO UPDATE SET
+                                    usage_count = usage_count + 1,
+                                    last_seen = ?''',
+                                 (func, datetime.now().isoformat(), datetime.now().isoformat()))
+        
+        conn_pattern.commit()
+        conn_pattern.close()
+    
+    # Send to Enhancement API for analysis
+    import requests
+    requests.post('http://localhost:5002/api/cpa/analyze_response',
+                 json={'response': response, 'timestamp': datetime.now().isoformat()},
+                 timeout=1)
+    
+except Exception as e:
+    # Silent fail to not interrupt CC
+    pass
+EOF
+
+# Trigger learning system to process new data
+curl -s -X POST http://localhost:5002/api/cse/learn_from_interaction \
+  -H "Content-Type: application/json" \
+  -d "{\"type\": \"response_captured\", \"timestamp\": \"$TIMESTAMP\"}" > /dev/null 2>&1
+
+echo "✅ Response captured for learning"

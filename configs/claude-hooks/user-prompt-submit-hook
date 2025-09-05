@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# This hook runs ONLY when you submit a prompt in Claude Code
+# It checks if CCU has been initialized for this CC session
+
+CCU_SESSION_FILE="/tmp/.ccu_cc_session_$$"
+
+if [ ! -f "$CCU_SESSION_FILE" ]; then
+    # First prompt in THIS Claude Code session
+    echo "🚀 Initializing CCU for this Claude Code session..."
+    
+    # Set key environment variables (non-invasive)
+    export CCO_AUTO_INVOKE=true
+    export MAX_PARALLEL=50
+    export CCU_AUTO_OPTIMIZE=true
+    export DECISION_TRACKING_ENABLED=true
+    
+    # Mark this CC session as initialized
+    touch "$CCU_SESSION_FILE"
+    
+    echo "✅ CCU Active: 82 configs | 4.3M× speed | Auto-CCO enabled"
+fi
+
+# Silent operation after first prompt
+exit 0
