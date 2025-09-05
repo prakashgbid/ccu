@@ -1,0 +1,29 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/MAC/Documents/projects/.claude/hooks/log-tool-usage.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/MAC/Documents/projects/.claude/hooks/log-tool-result.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "env": {
+    "CC_LOG_PATH": "/Users/MAC/Documents/projects/.claude/logs"
+  }
+}

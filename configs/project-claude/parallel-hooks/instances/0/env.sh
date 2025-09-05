@@ -1,0 +1,7 @@
+export CC_INSTANCE_ID="0"
+export CC_HOOK_CATEGORY="0"  
+export CC_SHARED_PATH="/Users/MAC/Documents/projects/.claude/parallel-hooks/shared"
+export CC_INSTANCE_PATH="/Users/MAC/Documents/projects/.claude/parallel-hooks/instances/0"
+export CC_SESSION_ID="hook-0-$(date +%s)"
+export CC_INSTANCE_COLOR="\033[1;33m"
+export CC_INSTANCE_DESCRIPTION="COORDINATION HUB - Hook Orchestration"

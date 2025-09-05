@@ -1,0 +1,30 @@
+{
+  "parallel_instances": 8,
+  "resource_allocation": {
+    "max_memory_per_instance": "2GB",
+    "cpu_cores_per_instance": 1,
+    "shared_storage": "/Users/MAC/Documents/projects/.claude/parallel-hooks/shared"
+  },
+  "instance_assignments": {
+    "cc1": ["cognitive", "predictive", "transparent-thinking"],
+    "cc2": ["cks-integration", "communication", "knowledge-sync"],
+    "cc3": ["code-quality", "reuse-enforcement", "anti-duplication"],
+    "cc4": ["project-awareness", "caia-context", "architecture-mapping"],
+    "cc5": ["health-monitoring", "maintenance", "performance-tracking"],
+    "cc6": ["suggestions", "learning", "optimization"],
+    "cc7": ["systematic", "professional", "quality-gates"],
+    "cc8": ["coordination", "orchestration", "integration"]
+  },
+  "coordination": {
+    "event_bus_enabled": true,
+    "conflict_resolution": true,
+    "progress_aggregation": true,
+    "inter_instance_communication": true
+  },
+  "cks_integration": {
+    "enabled": true,
+    "api_url": "http://localhost:5555",
+    "cls_url": "http://localhost:5003",
+    "knowledge_sync": true
+  }
+}

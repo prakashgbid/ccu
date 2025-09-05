@@ -1,0 +1,1558 @@
+{
+  "timestamp": "2025-09-01 03:41:37",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: echo "Checking which shell is being used..."
+echo "Current shell: $SHELL"
+echo "Checking for shell configuration files..."
+ls -la ~/.bashrc ~/.bash_profile ~/.zshrc ~/.zprofile 2>/dev/null | head -20 | Description: Check current shell and config files",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:41:37",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        6 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:41:41",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Read",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.zshrc",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:41:41",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Read",
+  "result_status": "COMPLETED",
+  "details": "Lines read:        1",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:41:46",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Read",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/bash_prompt_wrapper.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:41:46",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Read",
+  "result_status": "COMPLETED",
+  "details": "Lines read:        1",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:41:58",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "MultiEdit",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/bash_prompt_wrapper.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:41:58",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "MultiEdit",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/bash_prompt_wrapper.sh",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:42:17",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "MultiEdit",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.zshrc",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:42:17",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "MultiEdit",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.zshrc",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:42:22",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: grep -l "echo" ~/.claude/aliases.sh ~/.claude/admin_shortcuts.sh ~/.claude/cks-environment.sh 2>/dev/null | Description: Find files with echo statements",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:42:22",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        3 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:42:26",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: grep "echo" ~/.claude/aliases.sh 2>/dev/null | head -5 | Description: Check echo statements in aliases.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:42:26",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        5 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:42:31",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: grep "^echo" ~/.claude/aliases.sh ~/.claude/admin_shortcuts.sh ~/.claude/cks-environment.sh 2>/dev/null | Description: Find echo statements at start of line",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:42:31",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:       10 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:42:36",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: sed -i.bak '/^echo "✅ Claude Workflow aliases loaded!"/,/^echo "  • workflow-status/s/^echo/# echo/' ~/.claude/aliases.sh | Description: Comment out startup messages in aliases.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:42:36",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        1 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:42:42",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Edit",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/admin_shortcuts.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:42:42",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Edit",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/admin_shortcuts.sh",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:42:48",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "MultiEdit",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/cks-environment.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:42:48",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "MultiEdit",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/cks-environment.sh",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:42:53",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: zsh -c 'source ~/.zshrc 2>&1 | head -20' | Description: Test new terminal startup output",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:42:54",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:       20 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:43:07",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Edit",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/bash_prompt_wrapper.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:43:07",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Edit",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/bash_prompt_wrapper.sh",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:43:30",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Write",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.zshrc_clean",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:43:31",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Write",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.zshrc_clean",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:43:36",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: cp ~/.zshrc ~/.zshrc.backup_verbose && cp ~/.zshrc_clean ~/.zshrc | Description: Backup and replace zshrc with clean version",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:43:37",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        1 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:43:42",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: zsh -c 'source ~/.zshrc' 2>&1 | Description: Test clean terminal startup",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:43:42",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        1 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:43:48",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: rm ~/.zshrc_clean | Description: Remove temporary clean zshrc file",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:43:49",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        1 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:46:28",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Task",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Tool-specific parameters available",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:46:31",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Glob",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Pattern: **/*hook* in /Users/MAC/.claude",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:46:31",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Glob",
+  "result_status": "COMPLETED",
+  "details": "Operation completed",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:46:34",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Glob",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Pattern: **/*startup* in /Users/MAC/.claude",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:46:34",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Glob",
+  "result_status": "COMPLETED",
+  "details": "Operation completed",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:46:36",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Read",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/cc-startup-hook.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:46:36",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Read",
+  "result_status": "COMPLETED",
+  "details": "Lines read:        1",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:46:39",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Read",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/hooks/session-startup.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:46:39",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Read",
+  "result_status": "COMPLETED",
+  "details": "Lines read:        1",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:46:42",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Read",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/hooks/cks-auto-start.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:46:42",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Read",
+  "result_status": "COMPLETED",
+  "details": "Lines read:        1",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:46:46",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: find /Users/MAC/Documents/projects/admin/scripts -name "*startup*" -o -name "*status*" 2>/dev/null | head -10 | Description: Find admin scripts related to startup or status",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:46:46",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        3 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:46:49",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Read",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/Documents/projects/admin/scripts/quick_status.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:46:49",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Read",
+  "result_status": "COMPLETED",
+  "details": "Lines read:        1",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:46:52",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Read",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/hooks/cc-comprehensive-hooks.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:46:52",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Read",
+  "result_status": "COMPLETED",
+  "details": "Lines read:        1",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:46:56",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: curl -s http://localhost:5555/stats 2>/dev/null | head -20 | Description: Test CKS API stats endpoint to see actual data",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:46:56",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        1 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:47:00",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: curl -s http://localhost:5002/health 2>/dev/null | Description: Check if enhancement systems are running",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:47:00",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        1 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:47:05",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: ls -la /Users/MAC/Documents/projects/caia/knowledge-system/data/chat_history.db 2>/dev/null && sqlite3 /Users/MAC/Documents/projects/caia/knowledge-system/data/chat_history.db "SELECT COUNT(*) FROM chat_interactions;" 2>/dev/null | Description: Check if chat history DB exists and get interaction count",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:47:05",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        2 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:47:08",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: ps aux | grep -E "(capture_context|cks-monitor|real-time)" | grep -v grep | Description: Check what background processes are actually running",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:47:08",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        2 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:48:01",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Task",
+  "result_status": "COMPLETED",
+  "details": "Operation completed",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:48:28",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Write",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/hooks/cc-startup-optimized.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:48:28",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Write",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/hooks/cc-startup-optimized.sh",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:48:32",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: chmod +x /Users/MAC/.claude/hooks/cc-startup-optimized.sh | Description: Make optimized startup hook executable",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:48:32",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        1 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:48:37",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: /Users/MAC/.claude/hooks/cc-startup-optimized.sh | Description: Test optimized startup hook",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:48:38",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        6 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:48:43",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Read",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/hooks/session-startup.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:48:43",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Read",
+  "result_status": "COMPLETED",
+  "details": "Lines read:        1",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:48:49",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Grep",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Search: session-startup",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:48:49",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Grep",
+  "result_status": "COMPLETED",
+  "details": "Operation completed",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:48:54",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Read",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/hooks/session-start.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:48:54",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Read",
+  "result_status": "COMPLETED",
+  "details": "Lines read:        1",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:49:00",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Read",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/Documents/projects/caia/tools/claude-code-ultimate/configs/hooks/caia-session-startup.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:49:00",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Read",
+  "result_status": "COMPLETED",
+  "details": "Lines read:        1",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:49:20",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Write",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/hooks/session-start-clean.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:49:20",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Write",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/hooks/session-start-clean.sh",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:49:25",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: chmod +x /Users/MAC/.claude/hooks/session-start-clean.sh | Description: Make clean startup hook executable",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:49:25",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        1 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:49:30",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: /Users/MAC/.claude/hooks/session-start-clean.sh | Description: Test clean startup hook",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:49:31",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        2 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:49:37",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: mv /Users/MAC/.claude/hooks/session-start.sh /Users/MAC/.claude/hooks/session-start.sh.verbose_backup | Description: Backup verbose startup hook",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:49:38",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        1 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:49:42",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: cp /Users/MAC/.claude/hooks/session-start-clean.sh /Users/MAC/.claude/hooks/session-start.sh | Description: Replace with clean startup hook",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:49:43",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        1 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:56:38",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "TodoWrite",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Tool-specific parameters available",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:56:38",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "TodoWrite",
+  "result_status": "COMPLETED",
+  "details": "Operation completed",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:57:13",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Write",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/health-check-tracker.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:57:13",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Write",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/health-check-tracker.sh",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:57:17",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: chmod +x /Users/MAC/.claude/health-check-tracker.sh | Description: Make health check tracker executable",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:57:17",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        1 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:57:26",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "TodoWrite",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Tool-specific parameters available",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:57:26",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "TodoWrite",
+  "result_status": "COMPLETED",
+  "details": "Operation completed",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:58:08",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Write",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/hooks/session-start-enhanced.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:58:08",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Write",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/hooks/session-start-enhanced.sh",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:58:12",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: chmod +x /Users/MAC/.claude/hooks/session-start-enhanced.sh | Description: Make enhanced startup hook executable",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:58:12",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        1 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:58:20",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "TodoWrite",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Tool-specific parameters available",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:58:20",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "TodoWrite",
+  "result_status": "COMPLETED",
+  "details": "Operation completed",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:58:25",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: /Users/MAC/.claude/hooks/session-start-enhanced.sh | Description: Test enhanced startup hook",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:58:44",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Edit",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/hooks/session-start-enhanced.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 03:58:44",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Edit",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/hooks/session-start-enhanced.sh",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 04:26:54",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Edit",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/hooks/session-start-enhanced.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 04:26:54",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Edit",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/hooks/session-start-enhanced.sh",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 04:27:02",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Edit",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/hooks/session-start-enhanced.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 04:27:02",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Edit",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/hooks/session-start-enhanced.sh",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 05:02:35",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: /Users/MAC/.claude/hooks/session-start-enhanced.sh | Description: Test enhanced startup hook again",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 05:02:47",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: cp /Users/MAC/.claude/hooks/session-start.sh /Users/MAC/.claude/hooks/session-start.sh.simple_backup | Description: Backup simple startup hook",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 05:02:48",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        1 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 05:02:53",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: cp /Users/MAC/.claude/hooks/session-start-enhanced.sh /Users/MAC/.claude/hooks/session-start.sh | Description: Replace with enhanced startup hook",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 05:02:54",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        1 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 05:03:02",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "TodoWrite",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Tool-specific parameters available",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 05:03:02",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "TodoWrite",
+  "result_status": "COMPLETED",
+  "details": "Operation completed",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 05:03:15",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Write",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/bin/cc-health",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 05:03:15",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Write",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/bin/cc-health",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 05:03:20",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: chmod +x /Users/MAC/.claude/bin/cc-health | Description: Make cc-health command executable",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 05:03:20",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        1 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 05:03:25",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: cc-health status | Description: Test cc-health status command",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 05:03:26",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        6 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:35:10",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Edit",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/hooks/session-start.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:35:10",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Edit",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/hooks/session-start.sh",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:35:26",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Edit",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/hooks/session-start.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:35:26",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Edit",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/hooks/session-start.sh",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:35:34",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Edit",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/hooks/session-start.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:35:34",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Edit",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/hooks/session-start.sh",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:35:38",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: /Users/MAC/.claude/hooks/session-start.sh; echo "Exit code: $?" | Description: Test startup hook with exit code",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:35:44",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:       11 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:35:59",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Write",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/hooks/session-start-minimal.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:35:59",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Write",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/hooks/session-start-minimal.sh",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:36:04",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: chmod +x /Users/MAC/.claude/hooks/session-start-minimal.sh && /Users/MAC/.claude/hooks/session-start-minimal.sh; echo "Exit code: $?" | Description: Test minimal startup hook",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:36:05",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        2 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:36:11",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Write",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/startup-config",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:36:11",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Write",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/startup-config",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:36:23",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Write",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/hooks/session-start-router.sh",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:36:23",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Write",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/hooks/session-start-router.sh",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:36:28",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: chmod +x /Users/MAC/.claude/hooks/session-start-router.sh | Description: Make router executable",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:36:28",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        1 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:36:33",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: cp /Users/MAC/.claude/hooks/session-start.sh /Users/MAC/.claude/hooks/session-start-enhanced.sh | Description: Copy current as enhanced version",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:36:34",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        1 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:36:39",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: cp /Users/MAC/.claude/hooks/session-start-router.sh /Users/MAC/.claude/hooks/session-start.sh | Description: Set router as main startup hook",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:36:39",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        1 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:36:44",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: /Users/MAC/.claude/hooks/session-start.sh; echo "Exit code: $?" | Description: Test the router with enhanced style",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:36:49",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:       11 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:36:54",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Edit",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/startup-config",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:36:54",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Edit",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/startup-config",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:36:59",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Bash",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "Command: /Users/MAC/.claude/hooks/session-start.sh; echo "Exit code: $?" | Description: Test the router with minimal style",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:36:59",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Bash",
+  "result_status": "COMPLETED",
+  "details": "Exit: unknown | Output:        2 lines | Errors:        1 lines",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:37:05",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PreToolUse",
+  "tool_name": "Edit",
+  "approval_status": "AUTO-APPROVED",
+  "approval_reason": "Project folder permissions configured for autonomous operation",
+  "details": "File: /Users/MAC/.claude/startup-config",
+  "auto_approved": true,
+  "project_path": "/Users/MAC/Documents/projects"
+}
+{
+  "timestamp": "2025-09-01 16:37:05",
+  "session_id": "ff4d638e-7acb-4086-9a8e-a4fa73631c12",
+  "event": "PostToolUse",
+  "tool_name": "Edit",
+  "result_status": "COMPLETED",
+  "details": "Modified: /Users/MAC/.claude/startup-config",
+  "success": "unknown",
+  "project_path": "/Users/MAC/Documents/projects"
+}
