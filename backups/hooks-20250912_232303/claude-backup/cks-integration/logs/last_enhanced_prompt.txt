@@ -1,0 +1,18 @@
+
+[🧠 CKS CONTEXT INJECTION]
+==================================================
+
+🔗 AVAILABLE DEPENDENCIES:
+  • error: S, y, s, t, e
+
+⚡ CKS RECOMMENDATIONS:
+  1. Check if similar functionality exists (see above)
+  2. Follow established patterns
+  3. Reuse available utilities
+  4. Maintain consistency with recent changes
+
+📊 CKS STATUS: 0 files indexed, 0 functions tracked, Last update: unknown
+==================================================
+
+[Original Request]:
+Create a function to calculate fibonacci numbers

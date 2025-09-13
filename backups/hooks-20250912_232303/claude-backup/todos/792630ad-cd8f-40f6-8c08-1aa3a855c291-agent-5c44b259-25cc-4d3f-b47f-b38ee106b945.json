@@ -1,0 +1,27 @@
+[
+  {
+    "content": "Create agent category directories in CAIA agents folder",
+    "status": "completed",
+    "id": "create-categories"
+  },
+  {
+    "content": "Categorize all 44 agents into appropriate folders",
+    "status": "completed",
+    "id": "categorize-agents"
+  },
+  {
+    "content": "Copy agent .md files to their categorized directories as README.md",
+    "status": "completed",
+    "id": "migrate-md-files"
+  },
+  {
+    "content": "Copy jira-connect directory to connectors category",
+    "status": "completed",
+    "id": "migrate-jira-connect"
+  },
+  {
+    "content": "Create migration log with results and categorization details",
+    "status": "completed",
+    "id": "generate-migration-log"
+  }
+]

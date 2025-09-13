@@ -1,0 +1,52 @@
+[
+  {
+    "content": "Complete WebSocket client integration in gameStore.tsx",
+    "status": "completed",
+    "id": "ws-client-integration"
+  },
+  {
+    "content": "Create WebSocket server startup script and integration",
+    "status": "completed",
+    "id": "ws-server-startup"
+  },
+  {
+    "content": "Add WebSocket connection tests and mocks",
+    "status": "completed",
+    "id": "ws-testing"
+  },
+  {
+    "content": "Create comprehensive tests for RouletteEngine",
+    "status": "completed",
+    "id": "game-engine-tests"
+  },
+  {
+    "content": "Add tests for RouletteWheel and BettingControls components",
+    "status": "completed",
+    "id": "component-tests"
+  },
+  {
+    "content": "Finalize roulette wheel spin animations and sound effects",
+    "status": "completed",
+    "id": "animation-finalization"
+  },
+  {
+    "content": "Configure Vercel deployment with WebSocket support",
+    "status": "completed",
+    "id": "deployment-config"
+  },
+  {
+    "content": "Fix remaining TypeScript type errors for build",
+    "status": "in_progress",
+    "id": "fix-type-errors"
+  },
+  {
+    "content": "End-to-end testing of complete game flow",
+    "status": "pending",
+    "id": "integration-testing"
+  },
+  {
+    "content": "Deploy to production and verify",
+    "status": "pending",
+    "id": "production-deploy"
+  }
+]

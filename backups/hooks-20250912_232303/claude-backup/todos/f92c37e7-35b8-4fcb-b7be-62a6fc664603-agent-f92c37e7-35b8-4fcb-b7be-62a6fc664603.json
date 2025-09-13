@@ -1,0 +1,47 @@
+[
+  {
+    "content": "Load CKS context and check for existing implementations",
+    "status": "completed",
+    "activeForm": "Loading CKS context"
+  },
+  {
+    "content": "Execute ParaForge for complete requirements gathering",
+    "status": "completed",
+    "activeForm": "Running ParaForge requirements gathering"
+  },
+  {
+    "content": "Create complete JIRA hierarchy via ParaForge",
+    "status": "completed",
+    "activeForm": "Creating JIRA hierarchy"
+  },
+  {
+    "content": "Populate SMS project with user stories",
+    "status": "completed",
+    "activeForm": "Populating JIRA tickets"
+  },
+  {
+    "content": "Decompose implementation into parallel phases",
+    "status": "in_progress",
+    "activeForm": "Decomposing into parallel phases"
+  },
+  {
+    "content": "Generate features.json for CCO",
+    "status": "pending",
+    "activeForm": "Generating features configuration"
+  },
+  {
+    "content": "Launch parallel CC instances via CCO",
+    "status": "pending",
+    "activeForm": "Launching parallel instances"
+  },
+  {
+    "content": "Execute all phases in parallel",
+    "status": "pending",
+    "activeForm": "Executing parallel phases"
+  },
+  {
+    "content": "Update CKS with new patterns",
+    "status": "pending",
+    "activeForm": "Updating CKS"
+  }
+]

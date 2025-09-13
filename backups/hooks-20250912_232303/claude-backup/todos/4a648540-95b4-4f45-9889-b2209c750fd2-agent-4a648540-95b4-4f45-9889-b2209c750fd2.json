@@ -1,0 +1,37 @@
+[
+  {
+    "content": "Create progress to markdown converter",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Setup auto-commit system for progress logs",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Create GitHub Pages daily logs sections",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Setup git hooks for automated progress collection",
+    "status": "completed",
+    "id": "6"
+  },
+  {
+    "content": "Test and verify complete automation pipeline",
+    "status": "completed",
+    "id": "7"
+  },
+  {
+    "content": "Setup CAIA aggregated progress page",
+    "status": "pending",
+    "id": "4"
+  },
+  {
+    "content": "Setup admin ecosystem progress page",
+    "status": "pending",
+    "id": "5"
+  }
+]

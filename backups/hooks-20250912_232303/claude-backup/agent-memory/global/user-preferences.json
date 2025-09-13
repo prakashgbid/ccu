@@ -1,0 +1,20 @@
+{
+  "coding_style": {
+    "framework": null,
+    "language_preferences": {},
+    "naming_conventions": null,
+    "comment_style": null
+  },
+  "communication": {
+    "verbosity": "auto-detect",
+    "technical_level": "auto-detect",
+    "response_format": "auto-detect"
+  },
+  "project_defaults": {
+    "tech_stack": [],
+    "deployment_target": null,
+    "testing_framework": null
+  },
+  "learned_preferences": {},
+  "last_updated": "2025-08-07T09:38:42Z"
+}

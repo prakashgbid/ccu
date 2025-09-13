@@ -1,0 +1,34 @@
+#!/bin/bash
+#
+# Manual CC Health Check Command
+#
+
+case "${1:-}" in
+    full|thorough)
+        echo "🔍 Running thorough system health check..."
+        /Users/MAC/.claude/health-check-tracker.sh perform
+        ;;
+    status|quick)
+        echo "📊 Quick health status:"
+        echo -n "  CKS API: "
+        timeout 1 curl -s http://localhost:5555/health &>/dev/null && echo "✓ Running" || echo "✗ Stopped"
+        echo -n "  CLS API: "
+        timeout 1 curl -s http://localhost:5003/health &>/dev/null && echo "✓ Running" || echo "✗ Stopped"
+        echo -n "  Context Daemon: "
+        pgrep -f "capture_context.py --daemon" &>/dev/null && echo "✓ Running" || echo "✗ Stopped"
+        echo ""
+        echo "Last thorough check: $(/Users/MAC/.claude/health-check-tracker.sh time)"
+        ;;
+    reset)
+        echo "🔄 Resetting health check timer..."
+        rm -f /Users/MAC/.claude/last_health_check
+        echo "Timer reset. Next CC session will run thorough check."
+        ;;
+    *)
+        echo "Usage: cc-health {full|status|reset}"
+        echo ""
+        echo "  full    - Run thorough health check now"
+        echo "  status  - Quick status check"
+        echo "  reset   - Reset the 4-hour timer"
+        ;;
+esac

@@ -1,0 +1,22 @@
+[
+  {
+    "content": "Research available MCP servers for productivity",
+    "status": "in_progress",
+    "activeForm": "Researching available MCP servers for productivity"
+  },
+  {
+    "content": "Categorize MCP servers by use case",
+    "status": "pending",
+    "activeForm": "Categorizing MCP servers by use case"
+  },
+  {
+    "content": "Create comprehensive list with installation instructions",
+    "status": "pending",
+    "activeForm": "Creating comprehensive list with installation instructions"
+  },
+  {
+    "content": "Prioritize servers based on project needs",
+    "status": "pending",
+    "activeForm": "Prioritizing servers based on project needs"
+  }
+]

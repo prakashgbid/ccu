@@ -1,0 +1,27 @@
+#!/bin/bash
+
+case "$1" in
+    stats)
+        /Users/MAC/.claude/cks-stats-dashboard.sh
+        ;;
+    check)
+        /Users/MAC/.claude/cks-check "${2:-test}"
+        ;;
+    train)
+        /Users/MAC/.claude/train "${@:2}"
+        ;;
+    status)
+        echo "CKS/CLS System Status:"
+        lsof -i :5000 > /dev/null 2>&1 && echo "  ✅ API: Active" || echo "  ❌ API: Down"
+        lsof -i :5004 > /dev/null 2>&1 && echo "  ✅ Trainer: Active" || echo "  ❌ Trainer: Down"
+        lsof -i :5555 > /dev/null 2>&1 && echo "  ✅ Bridge: Active" || echo "  ❌ Bridge: Down"
+        pgrep -f "auto-trainer" > /dev/null && echo "  ✅ Auto-trainer: Running" || echo "  ❌ Auto-trainer: Not running"
+        ;;
+    *)
+        echo "CKS/CLS Commands:"
+        echo "  cks stats   - Show learning dashboard"
+        echo "  cks check   - Check for duplicates"
+        echo "  cks train   - Manual training"
+        echo "  cks status  - System status"
+        ;;
+esac

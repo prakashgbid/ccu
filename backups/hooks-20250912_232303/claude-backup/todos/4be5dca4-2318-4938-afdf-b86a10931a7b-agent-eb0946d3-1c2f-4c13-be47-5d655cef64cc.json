@@ -1,0 +1,42 @@
+[
+  {
+    "content": "Read and cross-reference existing analysis documents",
+    "status": "completed",
+    "id": "analyze_existing_docs"
+  },
+  {
+    "content": "Execute open source solution finder to scan for replacements",
+    "status": "completed",
+    "id": "run_solution_finder"
+  },
+  {
+    "content": "Search codebase for TODO/FIXME comments and replacement opportunities",
+    "status": "completed",
+    "id": "scan_todos"
+  },
+  {
+    "content": "Check current dependencies and identify what's already available",
+    "status": "completed",
+    "id": "analyze_requirements"
+  },
+  {
+    "content": "Generate prioritized implementation plan with specific file modifications",
+    "status": "completed",
+    "id": "create_priority_plan"
+  },
+  {
+    "content": "List quick replacements that provide immediate value",
+    "status": "completed",
+    "id": "identify_immediate_wins"
+  },
+  {
+    "content": "Create step-by-step migration guide for each replacement",
+    "status": "completed",
+    "id": "document_migration_steps"
+  },
+  {
+    "content": "Calculate time/effort estimates and maintenance reduction benefits",
+    "status": "completed",
+    "id": "estimate_effort_impact"
+  }
+]

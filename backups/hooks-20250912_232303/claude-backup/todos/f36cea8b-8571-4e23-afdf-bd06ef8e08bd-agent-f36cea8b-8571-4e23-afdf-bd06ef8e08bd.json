@@ -1,0 +1,42 @@
+[
+  {
+    "content": "Fix failing test snapshots",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Fix GameStore tests",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Fix RouletteWheel component tests",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Start WebSocket server",
+    "status": "completed",
+    "id": "4"
+  },
+  {
+    "content": "Fix TypeScript errors",
+    "status": "completed",
+    "id": "5"
+  },
+  {
+    "content": "Run build verification",
+    "status": "completed",
+    "id": "6"
+  },
+  {
+    "content": "Deploy to Vercel",
+    "status": "completed",
+    "id": "7"
+  },
+  {
+    "content": "Verify health endpoints",
+    "status": "completed",
+    "id": "8"
+  }
+]

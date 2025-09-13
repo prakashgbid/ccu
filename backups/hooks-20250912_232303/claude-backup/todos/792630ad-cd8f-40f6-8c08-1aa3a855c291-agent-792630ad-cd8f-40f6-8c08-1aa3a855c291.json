@@ -1,0 +1,22 @@
+[
+  {
+    "content": "Find all .env files in CAIA ecosystem",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Analyze each integration/service in .env files",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Map to GCP equivalent services",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Create integration migration report",
+    "status": "completed",
+    "id": "4"
+  }
+]

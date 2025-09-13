@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# ============================================================================
+# QUICK TRAINING COMMAND
+# Usage: train "your prompt" "CC response summary"
+# ============================================================================
+
+SCRIPT_PATH="/Users/MAC/Documents/projects/caia/knowledge-system/log_interaction.py"
+
+if [ $# -eq 0 ]; then
+    # Interactive mode
+    python3 "$SCRIPT_PATH"
+elif [ $# -eq 1 ]; then
+    if [ "$1" == "process" ]; then
+        # Process all logs
+        python3 "$SCRIPT_PATH" process
+    elif [ "$1" == "auto" ]; then
+        # Start auto trainer
+        echo "🚀 Starting automatic log trainer..."
+        python3 /Users/MAC/Documents/projects/caia/knowledge-system/auto_log_trainer.py
+    elif [ "$1" == "stats" ]; then
+        # Show stats
+        curl -s http://localhost:5004/stats | jq
+    else
+        echo "Usage:"
+        echo "  train                     # Interactive logging"
+        echo "  train process            # Process all logs"
+        echo "  train auto               # Start auto trainer"
+        echo "  train stats              # Show training stats"
+        echo "  train \"prompt\" \"response\" # Quick log"
+    fi
+elif [ $# -ge 2 ]; then
+    # Quick mode
+    python3 "$SCRIPT_PATH" quick "$1" "$2" "${3:-}"
+else
+    echo "Usage: train \"prompt\" \"response\" [tools]"
+fi

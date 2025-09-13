@@ -1,0 +1,27 @@
+[
+  {
+    "content": "Create experiment tracking documentation in .claude/EXPERIMENTS.md",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Build A/B test framework in src/lib/services/experiments.ts",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Create metrics collection system in src/lib/analytics/metrics.ts",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Set up experiment state management integration",
+    "status": "completed",
+    "id": "4"
+  },
+  {
+    "content": "Create experiment dashboard component for monitoring",
+    "status": "completed",
+    "id": "5"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "content": "Clean test-project folder and organize 3 repositories",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Set up proper git remotes for each repository",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Ensure RC repository is clean application only",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Create comprehensive README for each repository",
+    "status": "completed",
+    "id": "4"
+  },
+  {
+    "content": "Create Atlassian Jira projects for both repositories",
+    "status": "pending",
+    "id": "5"
+  },
+  {
+    "content": "Set up learning infrastructure (Qdrant, Langfuse)",
+    "status": "pending",
+    "id": "6"
+  },
+  {
+    "content": "Implement first SME agents in SATS",
+    "status": "pending",
+    "id": "7"
+  },
+  {
+    "content": "Connect ADP to use SATS agents",
+    "status": "pending",
+    "id": "8"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "content": "Backup current CLAUDE.md file",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Fix bash syntax errors (gh config, aliases, functions)",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Ensure proper markdown formatting for code blocks",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Test the fixed file for syntax validity",
+    "status": "completed",
+    "id": "4"
+  },
+  {
+    "content": "Replace the original with the fixed version",
+    "status": "completed",
+    "id": "5"
+  }
+]

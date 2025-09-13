@@ -1,0 +1,52 @@
+[
+  {
+    "content": "Design hierarchical terminal architecture",
+    "status": "completed",
+    "activeForm": "Designing architecture"
+  },
+  {
+    "content": "Create terminal hierarchy manager",
+    "status": "completed",
+    "activeForm": "Creating hierarchy manager"
+  },
+  {
+    "content": "Implement parent-child-subchild communication protocol",
+    "status": "completed",
+    "activeForm": "Implementing communication"
+  },
+  {
+    "content": "Build real-time hierarchy dashboard",
+    "status": "in_progress",
+    "activeForm": "Building dashboard"
+  },
+  {
+    "content": "Create terminal relationship system",
+    "status": "pending",
+    "activeForm": "Creating relationship system"
+  },
+  {
+    "content": "Implement task logging and tracking",
+    "status": "pending",
+    "activeForm": "Implementing logging"
+  },
+  {
+    "content": "Add retry mechanism for failed tasks",
+    "status": "pending",
+    "activeForm": "Adding retry mechanism"
+  },
+  {
+    "content": "Create terminal labeling and identification",
+    "status": "pending",
+    "activeForm": "Creating labeling"
+  },
+  {
+    "content": "Build inter-terminal messaging system",
+    "status": "pending",
+    "activeForm": "Building messaging"
+  },
+  {
+    "content": "Implement resource allocation and balancing",
+    "status": "pending",
+    "activeForm": "Implementing resources"
+  }
+]

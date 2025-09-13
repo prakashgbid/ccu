@@ -1,0 +1,40 @@
+{
+  "project": "ROULETTECOMMUNITY",
+  "learned_patterns": {
+    "scaffolding": {
+      "template": "Next.js 14 with App Router",
+      "structure": "Domain-driven with /app, /components, /lib, /stores",
+      "success": true,
+      "reuse": true
+    },
+    "component_creation": {
+      "pattern": "Responsive 4-column grid",
+      "mobile_first": true,
+      "dark_mode": "Always include theme support",
+      "optimization": "Use React.memo for list items"
+    },
+    "rapid_features": {
+      "auth_flow": "2 hours with risk assessment",
+      "dashboard": "1 hour with grid system",
+      "theme_toggle": "30 minutes"
+    }
+  },
+  "preferences": {
+    "framework": "Next.js 14",
+    "styling": "Tailwind CSS only",
+    "components": "Functional with TypeScript",
+    "state": "Zustand for global state",
+    "testing": "Jest but don't block on coverage"
+  },
+  "optimizations": {
+    "parallel_component_creation": "Create UI while backend builds",
+    "reuse_auth_pattern": "Copy from completed auth flow",
+    "grid_template": "Always start with 4-column responsive"
+  },
+  "next_tasks": [
+    "Roulette game board component",
+    "Betting interface",
+    "Live game feed",
+    "Tournament brackets UI"
+  ]
+}

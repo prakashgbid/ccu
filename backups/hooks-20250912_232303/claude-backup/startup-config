@@ -1,0 +1,10 @@
+# Claude Code Startup Configuration
+# Choose your preferred startup style:
+#
+# Options:
+# - minimal   : Single line, essential info only (fastest)
+# - enhanced  : Full features with health checks and auto-start
+# - silent    : No output at all
+# - verbose   : Original verbose version (backup)
+
+STARTUP_STYLE=enhanced

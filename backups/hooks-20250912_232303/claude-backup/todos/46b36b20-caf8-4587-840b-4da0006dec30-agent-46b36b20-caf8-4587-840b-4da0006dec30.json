@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Review current Learning Academy implementation",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Check and fix any TypeScript errors in learning features",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Implement course enrollment functionality",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Add course progress tracking",
+    "status": "in_progress",
+    "id": "4"
+  },
+  {
+    "content": "Create course completion certificates",
+    "status": "pending",
+    "id": "5"
+  },
+  {
+    "content": "Test the Learning Academy features",
+    "status": "pending",
+    "id": "6"
+  }
+]

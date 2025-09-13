@@ -1,0 +1,27 @@
+[
+  {
+    "content": "Start the existing continuous learning system",
+    "status": "in_progress",
+    "activeForm": "Starting continuous learning system"
+  },
+  {
+    "content": "Create CC chat session capture mechanism",
+    "status": "pending",
+    "activeForm": "Creating chat capture mechanism"
+  },
+  {
+    "content": "Build real-time training pipeline for chat data",
+    "status": "pending",
+    "activeForm": "Building training pipeline"
+  },
+  {
+    "content": "Integrate CKS with CC session startup hook",
+    "status": "pending",
+    "activeForm": "Integrating with CC startup"
+  },
+  {
+    "content": "Set up auto-restart and monitoring",
+    "status": "pending",
+    "activeForm": "Setting up monitoring"
+  }
+]

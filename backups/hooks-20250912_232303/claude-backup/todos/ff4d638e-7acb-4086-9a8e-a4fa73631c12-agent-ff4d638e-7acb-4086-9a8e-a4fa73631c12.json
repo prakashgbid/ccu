@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Pre-Fix Documentation - Backup current state",
+    "status": "in_progress",
+    "activeForm": "Backing up current state"
+  },
+  {
+    "content": "Phase 1: Clean up conflicting systems",
+    "status": "pending",
+    "activeForm": "Cleaning up conflicting systems"
+  },
+  {
+    "content": "Phase 2: Configure native CC hooks",
+    "status": "pending",
+    "activeForm": "Configuring native CC hooks"
+  },
+  {
+    "content": "Phase 3: Integrate enhancement services",
+    "status": "pending",
+    "activeForm": "Integrating enhancement services"
+  },
+  {
+    "content": "Phase 4: Test and validate",
+    "status": "pending",
+    "activeForm": "Testing and validating"
+  },
+  {
+    "content": "Phase 5: Save to CCU repository",
+    "status": "pending",
+    "activeForm": "Saving to CCU repository"
+  }
+]

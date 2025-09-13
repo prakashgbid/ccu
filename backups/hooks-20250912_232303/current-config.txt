@@ -1,0 +1,40 @@
+=== Current Hook Configuration ===
+Settings.json hooks:
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/MAC/.claude/hooks/session-start.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Bash",
+      "Read(/Users/MAC/Documents/projects/**)",
+      "Write(/Users/MAC/Documents/projects/**)",
+      "Edit(/Users/MAC/Documents/projects/**)",
+      "MultiEdit(/Users/MAC/Documents/projects/**)",
+      "Glob(/Users/MAC/Documents/projects/**)",
+      "Grep(/Users/MAC/Documents/projects/**)"
+    ],
+    "defaultMode": "bypassPermissions",
+    "additionalDirectories": [
+      "/Users/MAC/.claude",
+      "/Users/MAC/.config",
+      "/Users/MAC/Library"
+
+~/.config/claude/hooks:
+total 40
+drwxr-xr-x@ 7 MAC  staff  224 Aug 31 17:46 .
+drwxr-xr-x@ 4 MAC  staff  128 Aug 31 17:46 ..
+-rwxr-xr-x@ 1 MAC  staff  584 Aug 31 17:46 notification.sh
+-rwxr-xr-x@ 1 MAC  staff  477 Aug 31 17:45 post-tool-use.sh
+-rwxr-xr-x@ 1 MAC  staff  424 Aug 31 17:45 pre-tool-use.sh
+-rwxr-xr-x@ 1 MAC  staff  322 Aug 30 05:45 session-start.sh
+-rwxr-xr-x@ 1 MAC  staff  477 Aug 31 17:45 user-prompt-submit.sh

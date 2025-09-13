@@ -1,0 +1,17 @@
+=== System Health Check ===
+Time: 2025-09-09 14:17:25
+
+Service Status:
+  CKS API (5555): ✗ Stopped
+  CKS Core (5000): ✗ Stopped
+  CLS Learning (5003): ✗ Stopped
+  Enhancement (5002): ✗ Stopped
+  Context Daemon: ✓ Running
+
+Database Status:
+  Knowledge DB:   0B
+  Chat History:   0B
+
+System Resources:
+  CPU Load: 
+  Memory: 5559

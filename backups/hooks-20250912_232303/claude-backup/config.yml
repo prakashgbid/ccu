@@ -1,0 +1,24 @@
+# Claude Code Configuration
+hooks:
+  enabled: true
+  path: /Users/MAC/.claude/hooks
+  
+  session_start: session-start-hook.sh
+  user_prompt_submit: user-prompt-submit-hook.sh
+  pre_tool_use: pre-tool-use-hook.sh
+  
+agents:
+  knowledge_checker:
+    enabled: true
+    auto_invoke: true
+    path: /Users/MAC/.claude/agents/knowledge-checker
+    
+environment:
+  CC_HOOKS_PATH: /Users/MAC/.claude/hooks
+  CKS_API_URL: http://localhost:5000
+  CLS_API_URL: http://localhost:5003
+  
+autostart:
+  cks_cls: true
+  monitor: true
+  recovery: true

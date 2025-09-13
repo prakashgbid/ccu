@@ -1,0 +1,20 @@
+{
+  "agent": "business-analyst",
+  "version": 1,
+  "initialized": "2025-08-07T09:38:42Z",
+  "last_active": "2025-08-07T09:38:42Z",
+  "interactions": 0,
+  "knowledge": {
+    "patterns": {},
+    "optimizations": {},
+    "user_preferences": {},
+    "project_contexts": {},
+    "learned_approaches": {}
+  },
+  "metrics": {
+    "tasks_completed": 0,
+    "patterns_discovered": 0,
+    "time_saved_hours": 0,
+    "errors_prevented": 0
+  }
+}

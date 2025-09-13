@@ -1,0 +1,203 @@
+# Web Action Verification Configuration
+# Automatic verification rules and templates
+
+version: 1.0
+github_user: prakashgbid
+
+# Verification rules for different action types
+verification_rules:
+  github_push:
+    triggers:
+      - "git push"
+      - "pushed to GitHub"
+      - "created repository"
+    verify:
+      - type: github_repo
+        url_template: "https://github.com/{github_user}/{repo}"
+        method: curl
+        expected_status: [200]
+        retry_count: 3
+        retry_delay: 10
+
+  wiki_update:
+    triggers:
+      - "updated wiki"
+      - "created wiki"
+      - "wiki documentation"
+    verify:
+      - type: github_wiki
+        url_template: "https://github.com/{github_user}/{repo}/wiki"
+        method: curl
+        expected_status: [200]
+        retry_count: 3
+        retry_delay: 10
+
+  pages_deploy:
+    triggers:
+      - "GitHub Pages"
+      - "deployed docs"
+      - "documentation site"
+    verify:
+      - type: github_pages
+        url_template: "https://{github_user}.github.io/{repo}/"
+        method: curl
+        expected_status: [200]
+        retry_count: 6
+        retry_delay: 30
+        note: "Pages deployment can take 5-10 minutes"
+
+  pypi_publish:
+    triggers:
+      - "published to PyPI"
+      - "pip package"
+      - "PyPI release"
+    verify:
+      - type: pypi_package
+        url_template: "https://pypi.org/project/{package}/"
+        api_url: "https://pypi.org/pypi/{package}/json"
+        method: curl
+        expected_status: [200]
+        retry_count: 3
+        retry_delay: 20
+
+  npm_publish:
+    triggers:
+      - "published to npm"
+      - "npm package"
+      - "node package"
+    verify:
+      - type: npm_package
+        url_template: "https://www.npmjs.com/package/{package}"
+        api_url: "https://registry.npmjs.org/{package}"
+        method: curl
+        expected_status: [200]
+        retry_count: 3
+        retry_delay: 10
+
+  docker_push:
+    triggers:
+      - "pushed to Docker Hub"
+      - "docker image"
+      - "container published"
+    verify:
+      - type: docker_image
+        url_template: "https://hub.docker.com/r/{username}/{image}"
+        api_url: "https://hub.docker.com/v2/repositories/{username}/{image}/"
+        method: curl
+        expected_status: [200]
+        retry_count: 3
+        retry_delay: 10
+
+# Templates for verification commands
+command_templates:
+  curl_check:
+    template: 'curl -s -o /dev/null -w "%{http_code}" "{url}"'
+    success_codes: [200, 301, 302]
+    
+  curl_json:
+    template: 'curl -s "{url}" | jq -r ".name"'
+    success_check: "not_empty"
+    
+  gh_check:
+    template: 'gh repo view {owner}/{repo} --json name -q ".name"'
+    success_check: "equals:{repo}"
+    
+  npm_check:
+    template: 'npm view {package} name'
+    success_check: "equals:{package}"
+    
+  pip_check:
+    template: 'pip index versions {package}'
+    success_check: "contains:{package}"
+
+# Automatic verification workflow
+workflow:
+  enabled: true
+  parallel_execution: true
+  report_format: markdown
+  report_location: ~/.claude/verification_reports/
+  
+  steps:
+    - name: "Pre-verification"
+      actions:
+        - log_action
+        - capture_urls
+        
+    - name: "Execute verification"
+      actions:
+        - run_verification
+        - retry_on_failure
+        
+    - name: "Post-verification"
+      actions:
+        - generate_report
+        - notify_results
+        - update_status
+
+# Notification settings
+notifications:
+  on_success:
+    - console: "✅ {action} verified: {url}"
+    - log: "SUCCESS: {action} at {url}"
+    
+  on_failure:
+    - console: "❌ {action} verification failed: {url}"
+    - log: "FAILURE: {action} at {url}"
+    - suggest: "Check URL format and retry"
+    
+  on_pending:
+    - console: "⏳ {action} verification pending (may take time to propagate)"
+    - log: "PENDING: {action} at {url}"
+
+# Known repositories for quick reference
+repositories:
+  - evolux-ai
+  - cognitron-engine
+  - codeforge-ai
+  - strategix-planner
+  - autonomix-engine
+  - flowmaster-orchestrator
+  - memcore-ai
+
+# Known packages for quick reference
+packages:
+  pypi:
+    - evolux
+    - cognitron
+    - codeforge
+    - strategix
+    - autonomix
+    - flowmaster
+    - memcore
+  
+  npm: []
+  
+  docker: []
+
+# Verification report template
+report_template: |
+  # Web Action Verification Report
+  
+  Date: {timestamp}
+  User: {github_user}
+  
+  ## Summary
+  - Total Actions: {total}
+  - Successful: {success}
+  - Failed: {failed}
+  - Pending: {pending}
+  
+  ## Details
+  
+  | Action | Type | URL | Status | Response | Time |
+  |--------|------|-----|--------|----------|------|
+  {details}
+  
+  ## Failed Actions
+  {failures}
+  
+  ## Recommendations
+  {recommendations}
+  
+  ---
+  Generated automatically by Claude verification system

@@ -1,0 +1,68 @@
+#!/bin/bash
+
+# Post-CKS-Update Hook
+# Triggers test evolution whenever CKS files are updated through CC
+
+# Check if the updated file is CKS-related
+FILE_PATH="$1"
+ACTION="$2"
+
+# Function to check if file is CKS-related
+is_cks_file() {
+    local file="$1"
+    
+    # Check if file is in CKS directories
+    if [[ "$file" == *"/knowledge-system/"* ]] || \
+       [[ "$file" == *"/caia/"* ]] || \
+       [[ "$file" == *"/.claude/"* ]] || \
+       [[ "$file" == *"/claude-code-ultimate/"* ]]; then
+        
+        # Check if it's a relevant file type
+        if [[ "$file" == *.py ]] || \
+           [[ "$file" == *.sh ]] || \
+           [[ "$file" == *.json ]] || \
+           [[ "$file" == *.yaml ]] || \
+           [[ "$file" == *.md ]]; then
+            return 0
+        fi
+    fi
+    
+    return 1
+}
+
+# Function to trigger evolution
+trigger_evolution() {
+    local reason="$1"
+    
+    echo "🧬 CKS Update Detected: $reason"
+    echo "📊 Triggering test evolution..."
+    
+    # Run the self-learning updater in background
+    python3 /Users/MAC/Documents/projects/caia/knowledge-system/scripts/self_learning_test_updater.py > \
+        /Users/MAC/Documents/projects/caia/knowledge-system/logs/evolution_$(date +%Y%m%d_%H%M%S).log 2>&1 &
+    
+    echo "✅ Test evolution triggered (PID: $!)"
+}
+
+# Main logic
+if [ -n "$FILE_PATH" ] && is_cks_file "$FILE_PATH"; then
+    case "$ACTION" in
+        "create"|"edit"|"update")
+            trigger_evolution "File updated: $(basename $FILE_PATH)"
+            ;;
+        "delete")
+            trigger_evolution "File deleted: $(basename $FILE_PATH)"
+            ;;
+        *)
+            # For any CKS-related action
+            trigger_evolution "CKS modification: $ACTION"
+            ;;
+    esac
+fi
+
+# Special case: If CC mentions updating CKS capabilities
+if [[ "$ACTION" == *"capability"* ]] || \
+   [[ "$ACTION" == *"feature"* ]] || \
+   [[ "$ACTION" == *"integration"* ]]; then
+    trigger_evolution "New capability/feature added"
+fi

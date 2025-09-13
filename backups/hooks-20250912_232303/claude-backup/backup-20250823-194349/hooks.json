@@ -1,0 +1,63 @@
+{
+  "version": "1.0",
+  "description": "Claude Code Hooks Configuration - MANDATORY CKS Integration",
+  "hooks": {
+    "session_start": {
+      "enabled": true,
+      "script": "/Users/MAC/.claude/cc-startup-hook.sh",
+      "timeout": 30,
+      "required": true,
+      "description": "Load CAIA Knowledge System integration"
+    },
+    "pre_code_generation": {
+      "enabled": true,
+      "script": "/Users/MAC/Documents/projects/caia/knowledge-system/cc-integration/hooks/pre-code-hook.sh",
+      "timeout": 60,
+      "required": true,
+      "description": "Check for code redundancy before generation"
+    },
+    "pre_architecture": {
+      "enabled": true,
+      "script": "/Users/MAC/Documents/projects/caia/knowledge-system/cc-integration/hooks/pre-architecture-hook.sh",
+      "timeout": 45,
+      "required": true,
+      "description": "Scan architectural patterns before design"
+    },
+    "pre_suggestion": {
+      "enabled": true,
+      "script": "/Users/MAC/Documents/projects/caia/knowledge-system/cc-integration/hooks/pre-suggestion-hook.sh",
+      "timeout": 30,
+      "required": true,
+      "description": "Search existing capabilities before suggestions"
+    },
+    "post_code_generation": {
+      "enabled": true,
+      "script": "/Users/MAC/Documents/projects/caia/knowledge-system/cc-integration/hooks/post-code-hook.sh",
+      "timeout": 30,
+      "required": false,
+      "description": "Update knowledge base after code generation"
+    }
+  },
+  "enforcement": {
+    "level": "MANDATORY",
+    "bypass_allowed": false,
+    "log_all_actions": true,
+    "require_justification": true,
+    "escalation_enabled": true
+  },
+  "cks_integration": {
+    "path": "/Users/MAC/Documents/projects/caia/knowledge-system",
+    "api_url": "http://localhost:5000",
+    "real_time_monitoring": true,
+    "context_auto_load": true,
+    "redundancy_threshold": 0.85,
+    "architecture_compliance": true
+  },
+  "logging": {
+    "enabled": true,
+    "log_file": "/Users/MAC/.claude/cks-integration.log",
+    "log_level": "INFO",
+    "max_log_size": "10MB",
+    "rotate_logs": true
+  }
+}

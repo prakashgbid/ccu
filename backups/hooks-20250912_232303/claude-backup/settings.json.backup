@@ -1,0 +1,33 @@
+{
+  "hooks": {
+    "enabled": true,
+    "sessionStart": "/Users/MAC/.claude/hooks/session-start.sh",
+    "preCommit": null,
+    "postCommit": null
+  },
+  "performance": {
+    "maxParallel": 50,
+    "autoInvokeCCO": true,
+    "turboMode": true
+  },
+  "integration": {
+    "ccUltimate": {
+      "enabled": true,
+      "configPath": "/Users/MAC/Documents/projects/caia/tools/claude-code-ultimate",
+      "autoOptimize": true,
+      "minConfidence": 0.8
+    },
+    "ccOrchestrator": {
+      "enabled": true,
+      "autoCalculate": true,
+      "taskTimeout": 60000,
+      "rateLimit": 100,
+      "contextPreservation": true
+    }
+  },
+  "tools": {
+    "preferredPackageManager": "pnpm",
+    "preferredSearch": "rg",
+    "preferredFileViewer": "bat"
+  }
+}

@@ -1,0 +1,5 @@
+/Users/MAC/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+2025-08-30 15:31:32,052 - __main__ - INFO - Validating CC response against CKS...
+2025-08-30 15:31:32,052 - __main__ - INFO - Extracted elements: 1 total
+2025-08-30 15:31:32,068 - __main__ - INFO - Validation complete: 0 warnings

@@ -1,0 +1,27 @@
+[
+  {
+    "content": "Create agent-story assignment system",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Build development status tracker",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Generate agent teams for each story",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Create live development dashboard",
+    "status": "completed",
+    "id": "4"
+  },
+  {
+    "content": "Integrate with Jira API for updates",
+    "status": "completed",
+    "id": "5"
+  }
+]

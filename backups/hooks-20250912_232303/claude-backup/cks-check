@@ -1,0 +1,100 @@
+#!/bin/bash
+
+# ============================================================================
+# CKS PRE-CHECK COMMAND
+# Use this BEFORE writing code to check for duplicates and existing solutions
+# Usage: cks-check "what you want to implement"
+# ============================================================================
+
+QUERY="${1:-}"
+
+if [ -z "$QUERY" ]; then
+    echo "Usage: cks-check \"function or feature to implement\""
+    echo ""
+    echo "Examples:"
+    echo "  cks-check \"authentication\""
+    echo "  cks-check \"payment processing\""
+    echo "  cks-check \"test runner\""
+    exit 1
+fi
+
+echo "🔍 CKS Pre-Implementation Check"
+echo "================================"
+echo "Query: $QUERY"
+echo ""
+
+# 1. Check for existing implementations
+echo "📁 Checking for existing implementations..."
+RESULTS=$(curl -s "http://localhost:5555/search/function?query=$QUERY" 2>/dev/null)
+
+if [ $? -eq 0 ]; then
+    COUNT=$(echo "$RESULTS" | jq -r '.count // 0')
+    
+    if [ "$COUNT" -gt 0 ]; then
+        echo "⚠️  Found $COUNT existing implementations:"
+        echo "$RESULTS" | jq -r '.results[:5][] | "  • \(.file) (\(.type), \(.language))"' 2>/dev/null
+        echo ""
+        echo "🎯 RECOMMENDATION: Review existing code before implementing"
+    else
+        echo "✅ No existing implementations found"
+    fi
+else
+    echo "⚠️  CKS not available - cannot check for duplicates"
+fi
+
+echo ""
+
+# 2. Check for similar patterns
+echo "🧠 Checking for similar patterns..."
+PATTERNS=$(curl -s "http://localhost:5000/api/suggest?context=$QUERY" 2>/dev/null)
+
+if [ $? -eq 0 ]; then
+    SUGGESTIONS=$(echo "$PATTERNS" | jq -r '.suggestions[]' 2>/dev/null)
+    
+    if [ -n "$SUGGESTIONS" ]; then
+        echo "💡 Suggestions based on patterns:"
+        echo "$SUGGESTIONS" | while read -r suggestion; do
+            echo "  • $suggestion"
+        done
+    else
+        echo "  No specific patterns found"
+    fi
+else
+    echo "  Pattern service not available"
+fi
+
+echo ""
+
+# 3. Check recent implementations
+echo "📅 Recent related work..."
+RECENT=$(sqlite3 /Users/MAC/Documents/projects/caia/knowledge-system/data/knowledge.db \
+    "SELECT path, datetime(timestamp) FROM components 
+     WHERE path LIKE '%$QUERY%' 
+     ORDER BY timestamp DESC LIMIT 3" 2>/dev/null)
+
+if [ -n "$RECENT" ]; then
+    echo "$RECENT" | while IFS='|' read -r path timestamp; do
+        echo "  • $path (modified: $timestamp)"
+    done
+else
+    echo "  No recent related files"
+fi
+
+echo ""
+echo "================================"
+
+# 4. Decision helper
+COUNT=${COUNT:-0}
+if [ "$COUNT" -gt 5 ]; then
+    echo "🔴 HIGH DUPLICATION RISK: Many existing implementations found"
+    echo "   Action: USE EXISTING CODE or REFACTOR"
+elif [ "$COUNT" -gt 0 ]; then
+    echo "🟡 MODERATE DUPLICATION RISK: Some existing code found"
+    echo "   Action: REVIEW EXISTING before implementing"
+else
+    echo "🟢 LOW DUPLICATION RISK: Safe to implement"
+    echo "   Action: PROCEED WITH IMPLEMENTATION"
+fi
+
+echo ""
+echo "💡 TIP: Always run 'cks-check' before implementing new features!"

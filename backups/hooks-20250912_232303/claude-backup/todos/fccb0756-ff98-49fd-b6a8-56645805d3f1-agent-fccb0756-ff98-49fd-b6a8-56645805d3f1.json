@@ -1,0 +1,27 @@
+[
+  {
+    "content": "Create real-time chat capture system for CKS",
+    "status": "in_progress",
+    "activeForm": "Creating real-time chat capture system"
+  },
+  {
+    "content": "Implement continuous learning pipeline for chat data",
+    "status": "pending",
+    "activeForm": "Implementing continuous learning pipeline"
+  },
+  {
+    "content": "Set up CC session hooks for automatic CKS activation",
+    "status": "pending",
+    "activeForm": "Setting up CC session hooks"
+  },
+  {
+    "content": "Create pattern recognition for user thinking styles",
+    "status": "pending",
+    "activeForm": "Creating pattern recognition system"
+  },
+  {
+    "content": "Test and validate learning system",
+    "status": "pending",
+    "activeForm": "Testing and validating"
+  }
+]

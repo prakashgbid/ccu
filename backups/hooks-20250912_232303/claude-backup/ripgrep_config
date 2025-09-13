@@ -1,0 +1,7 @@
+# Maximum performance ripgrep config
+--threads=50
+--max-columns=200
+--max-columns-preview
+--hidden
+--no-ignore-vcs
+--smart-case

@@ -1,0 +1,159 @@
+#!/usr/bin/env python3
+"""
+Claude Workflow - Global command to invoke saved workflows
+Usage: claude-workflow <workflow-name> [options]
+"""
+
+import sys
+import os
+import subprocess
+import json
+from pathlib import Path
+import asyncio
+
+# Workflow registry
+WORKFLOWS = {
+    'development': {
+        'name': 'Development Workflow',
+        'description': 'Complete development pipeline from requirements to production',
+        'path': '/Users/MAC/.claude/workflows/development_workflow.py',
+        'aliases': ['dev', 'develop']
+    },
+    'test': {
+        'name': 'Testing Workflow',
+        'description': 'Comprehensive testing pipeline',
+        'path': '/Users/MAC/.claude/workflows/test_workflow.py',
+        'aliases': ['qa', 'testing']
+    },
+    'deploy': {
+        'name': 'Deployment Workflow',
+        'description': 'Deploy to production with checks',
+        'path': '/Users/MAC/.claude/workflows/deploy_workflow.py',
+        'aliases': ['production', 'release']
+    },
+    'rc': {
+        'name': 'Roulette Community Workflow',
+        'description': 'Specific workflow for RC project',
+        'path': '/Users/MAC/.claude/workflows/rc_workflow.py',
+        'aliases': ['roulette', 'roulette-community']
+    }
+}
+
+def list_workflows():
+    """List all available workflows"""
+    print("🚀 Available Workflows:")
+    print("="*60)
+    
+    for key, workflow in WORKFLOWS.items():
+        print(f"\n📋 {workflow['name']} ({key})")
+        print(f"   {workflow['description']}")
+        if workflow.get('aliases'):
+            print(f"   Aliases: {', '.join(workflow['aliases'])}")
+    
+    print("\n" + "="*60)
+    print("Usage: claude-workflow <workflow-name> [options]")
+    print("Example: claude-workflow development --interactive")
+
+def get_workflow(name):
+    """Get workflow by name or alias"""
+    # Direct match
+    if name in WORKFLOWS:
+        return WORKFLOWS[name]
+    
+    # Check aliases
+    for key, workflow in WORKFLOWS.items():
+        if name in workflow.get('aliases', []):
+            return workflow
+    
+    return None
+
+def run_workflow(workflow_name, args):
+    """Run the specified workflow"""
+    workflow = get_workflow(workflow_name)
+    
+    if not workflow:
+        print(f"❌ Workflow '{workflow_name}' not found")
+        print("\nAvailable workflows:")
+        for key in WORKFLOWS:
+            print(f"  - {key}")
+        sys.exit(1)
+    
+    print(f"🚀 Running: {workflow['name']}")
+    print(f"   Description: {workflow['description']}")
+    
+    # Check if workflow file exists
+    if not os.path.exists(workflow['path']):
+        print(f"❌ Workflow file not found: {workflow['path']}")
+        sys.exit(1)
+    
+    # Build command
+    cmd = [sys.executable, workflow['path']]
+    
+    # Add arguments
+    if '--interactive' in args or '-i' in args:
+        cmd.append('--interactive')
+    
+    if '--project' in args:
+        idx = args.index('--project')
+        if idx + 1 < len(args):
+            cmd.extend(['--project', args[idx + 1]])
+    
+    if '--step' in args:
+        idx = args.index('--step')
+        if idx + 1 < len(args):
+            cmd.extend(['--step', args[idx + 1]])
+    
+    # Execute workflow
+    try:
+        result = subprocess.run(cmd, check=False)
+        sys.exit(result.returncode)
+    except KeyboardInterrupt:
+        print("\n⚠️ Workflow interrupted")
+        sys.exit(1)
+    except Exception as e:
+        print(f"❌ Error running workflow: {e}")
+        sys.exit(1)
+
+def save_workflow(name, config):
+    """Save a new workflow configuration"""
+    workflows_dir = Path("/Users/MAC/.claude/workflows")
+    workflows_dir.mkdir(parents=True, exist_ok=True)
+    
+    config_file = workflows_dir / f"{name}_config.json"
+    with open(config_file, 'w') as f:
+        json.dump(config, f, indent=2)
+    
+    print(f"✅ Workflow '{name}' saved to {config_file}")
+
+def main():
+    """Main entry point"""
+    if len(sys.argv) < 2:
+        list_workflows()
+        sys.exit(0)
+    
+    command = sys.argv[1]
+    
+    if command in ['--help', '-h', 'help']:
+        print("Claude Workflow Manager")
+        print("="*60)
+        print("Usage:")
+        print("  claude-workflow                    # List workflows")
+        print("  claude-workflow <name>             # Run workflow")
+        print("  claude-workflow <name> -i          # Run interactively")
+        print("  claude-workflow <name> --step N    # Run specific step")
+        print("\nOptions:")
+        print("  --interactive, -i    Run workflow step-by-step")
+        print("  --project PATH       Set project path")
+        print("  --step N            Run only step N")
+        print("  --help, -h          Show this help")
+        sys.exit(0)
+    
+    if command in ['list', '--list', '-l']:
+        list_workflows()
+        sys.exit(0)
+    
+    # Run workflow
+    run_workflow(command, sys.argv[2:])
+
+if __name__ == "__main__":
+    main()

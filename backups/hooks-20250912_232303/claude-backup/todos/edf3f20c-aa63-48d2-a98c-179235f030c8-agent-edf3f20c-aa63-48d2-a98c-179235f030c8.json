@@ -1,0 +1,27 @@
+[
+  {
+    "content": "Analyze current projects folder structure",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Identify folders and files to remove",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Create cleanup script for safe removal",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Execute cleanup",
+    "status": "completed",
+    "id": "4"
+  },
+  {
+    "content": "Verify final structure",
+    "status": "completed",
+    "id": "5"
+  }
+]

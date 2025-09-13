@@ -1,0 +1,109 @@
+{
+  "version": "1.0.0",
+  "enabled": true,
+  "categories": {
+    "pre-execution": {
+      "enabled": true,
+      "hooks": [
+        "validate-inputs",
+        "check-dependencies",
+        "load-context"
+      ]
+    },
+    "post-execution": {
+      "enabled": true,
+      "hooks": [
+        "cleanup-temp-files",
+        "log-results",
+        "update-metrics"
+      ]
+    },
+    "error-handling": {
+      "enabled": true,
+      "hooks": [
+        "capture-error",
+        "notify-error",
+        "auto-recover"
+      ]
+    },
+    "validation": {
+      "enabled": true,
+      "hooks": [
+        "schema-validator",
+        "business-rules",
+        "security-checks"
+      ]
+    },
+    "transformation": {
+      "enabled": true,
+      "hooks": [
+        "data-normalizer",
+        "format-converter",
+        "enrichment"
+      ]
+    },
+    "monitoring": {
+      "enabled": true,
+      "hooks": [
+        "performance-tracker",
+        "health-check",
+        "metrics-collector"
+      ]
+    },
+    "integration": {
+      "enabled": true,
+      "hooks": [
+        "api-connector",
+        "database-sync",
+        "webhook-handler"
+      ]
+    },
+    "security": {
+      "enabled": true,
+      "hooks": [
+        "auth-checker",
+        "permission-validator",
+        "encryption-handler"
+      ]
+    },
+    "performance": {
+      "enabled": true,
+      "hooks": [
+        "optimize-query",
+        "cache-manager",
+        "load-balancer"
+      ]
+    },
+    "logging": {
+      "enabled": true,
+      "hooks": [
+        "structured-logger",
+        "audit-trail",
+        "debug-logger"
+      ]
+    },
+    "notification": {
+      "enabled": true,
+      "hooks": [
+        "alert-system",
+        "email-sender",
+        "slack-notifier"
+      ]
+    },
+    "custom": {
+      "enabled": true,
+      "hooks": [
+        "user-defined",
+        "project-specific",
+        "experimental"
+      ]
+    }
+  },
+  "settings": {
+    "autoStart": true,
+    "monitorInterval": 2000,
+    "retryOnError": true,
+    "maxRetries": 3,
+    "logLevel": "info"
+  }
+}

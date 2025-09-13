@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Test auto-approval functionality with sample scripts",
+    "status": "pending",
+    "activeForm": "Testing auto-approval functionality after CC restart"
+  },
+  {
+    "content": "Exit CC session and restart to load new configuration",
+    "status": "pending",
+    "activeForm": "Restarting CC to activate configuration"
+  },
+  {
+    "content": "Verify auto-approval works with test script",
+    "status": "pending",
+    "activeForm": "Verifying auto-approval functionality"
+  },
+  {
+    "content": "Review existing CC configurations in ~/.claude",
+    "status": "pending",
+    "activeForm": "Reviewing existing CC configurations"
+  },
+  {
+    "content": "Audit current settings.json files across all levels",
+    "status": "pending",
+    "activeForm": "Auditing settings.json files"
+  },
+  {
+    "content": "Update CCU repository with best practices",
+    "status": "pending",
+    "activeForm": "Updating CCU repository"
+  }
+]

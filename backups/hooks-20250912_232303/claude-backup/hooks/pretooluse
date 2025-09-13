@@ -1,0 +1,6 @@
+#!/bin/bash
+# Pre tool use hook - placeholder to prevent errors
+# This hook runs before a tool is used in Claude Code
+
+# For now, just exit successfully
+exit 0

@@ -1,0 +1,62 @@
+[
+  {
+    "content": "Execute workflow step-by-step and fix issues",
+    "status": "completed",
+    "id": "42"
+  },
+  {
+    "content": "Step 1: Product Owner requirements gathering",
+    "status": "completed",
+    "id": "43"
+  },
+  {
+    "content": "Step 2: Business Analyst requirements analysis",
+    "status": "completed",
+    "id": "44"
+  },
+  {
+    "content": "Step 3: Frontend Developer implementation",
+    "status": "completed",
+    "id": "45"
+  },
+  {
+    "content": "Step 4: Backend Developer implementation",
+    "status": "pending",
+    "id": "46"
+  },
+  {
+    "content": "Step 5: Automation QA testing",
+    "status": "pending",
+    "id": "47"
+  },
+  {
+    "content": "Step 6: UX/UI Designer review",
+    "status": "pending",
+    "id": "48"
+  },
+  {
+    "content": "Step 7: Deploy to Vercel",
+    "status": "pending",
+    "id": "49"
+  },
+  {
+    "content": "Step 8: Product Owner approval",
+    "status": "pending",
+    "id": "50"
+  },
+  {
+    "content": "Create global Development workflow command",
+    "status": "completed",
+    "id": "51"
+  },
+  {
+    "content": "Setup Jira project management",
+    "status": "completed",
+    "id": "52"
+  },
+  {
+    "content": "Create local Jira backup/simulation",
+    "status": "completed",
+    "id": "53"
+  }
+]

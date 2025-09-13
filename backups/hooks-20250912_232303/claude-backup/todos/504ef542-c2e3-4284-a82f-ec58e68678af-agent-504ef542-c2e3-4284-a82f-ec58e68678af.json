@@ -1,0 +1,27 @@
+[
+  {
+    "content": "Enhance CCO with proper CC instance lifecycle management",
+    "status": "in_progress",
+    "activeForm": "Enhancing CCO system"
+  },
+  {
+    "content": "Implement task list processing in CCO",
+    "status": "pending",
+    "activeForm": "Implementing task processing"
+  },
+  {
+    "content": "Add terminal pool management to CCO",
+    "status": "pending",
+    "activeForm": "Adding terminal pool management"
+  },
+  {
+    "content": "Create CCO dashboard and monitoring",
+    "status": "pending",
+    "activeForm": "Creating CCO dashboard"
+  },
+  {
+    "content": "Implement robust terminal cleanup",
+    "status": "pending",
+    "activeForm": "Implementing terminal cleanup"
+  }
+]

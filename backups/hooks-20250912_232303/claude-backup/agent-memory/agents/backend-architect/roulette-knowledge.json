@@ -1,0 +1,46 @@
+{
+  "project": "ROULETTECOMMUNITY",
+  "architecture_decisions": {
+    "database": "Supabase (PostgreSQL)",
+    "realtime": "Supabase Realtime + Socket.io fallback",
+    "api_pattern": "Next.js API routes with /api/v1 prefix",
+    "auth": "Supabase Auth with custom risk assessment",
+    "security": "Multi-layered with device fingerprinting"
+  },
+  "domain_model": {
+    "value_objects": ["Money", "Bet", "RouletteNumber"],
+    "entities": ["User", "Game", "Transaction"],
+    "aggregates": ["GameSession", "BettingRound"],
+    "services": ["AuthService", "GameEngine", "PaymentService"]
+  },
+  "patterns_implemented": {
+    "null_safe_services": {
+      "description": "Services return null when unconfigured",
+      "benefit": "No build failures from missing env vars",
+      "reusable": true
+    },
+    "risk_assessment": {
+      "factors": ["device", "location", "behavior", "history"],
+      "implementation": "Middleware layer",
+      "threshold_based": true
+    }
+  },
+  "api_structure": {
+    "auth": ["/api/auth/login", "/api/auth/signup", "/api/auth/verify"],
+    "game": ["/api/game/state", "/api/game/bet", "/api/game/history"],
+    "admin": ["/api/admin/dashboard", "/api/admin/users"],
+    "payments": "Pending Stripe integration"
+  },
+  "next_priorities": [
+    "WebSocket server for real-time gaming",
+    "Game engine with provably fair RNG",
+    "Payment processing with Stripe",
+    "Tournament matchmaking system"
+  ],
+  "performance_targets": {
+    "api_response": "<100ms",
+    "websocket_latency": "<50ms",
+    "concurrent_users": "10,000+",
+    "database_connections": "Pooled with PgBouncer"
+  }
+}

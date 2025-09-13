@@ -1,0 +1,377 @@
+{
+  "name": "CC Admin Commands",
+  "description": "Admin command shortcuts for Claude Code sessions",
+  "version": "1.0.0",
+  "prefix": "%",
+  "commands": {
+    "status": {
+      "aliases": ["s"],
+      "description": "📊 Quick project overview - Shows commits, TODOs, active work",
+      "action": "admin/scripts/quick_status.sh",
+      "category": "monitoring",
+      "usage": "%status or %s",
+      "example": "%s"
+    },
+    "caia": {
+      "aliases": ["c"],
+      "description": "🎯 CAIA project status - Component tracking, roadmap progress",
+      "action": "admin/scripts/caia_status.sh",
+      "category": "caia",
+      "usage": "%caia or %c",
+      "example": "%c"
+    },
+    "summary": {
+      "aliases": ["sum"],
+      "description": "📋 Executive summary - Complete context across all projects",
+      "action": "python3 admin/scripts/query_context.py --command summary",
+      "category": "monitoring",
+      "usage": "%summary or %sum",
+      "example": "%sum"
+    },
+    "decisions": {
+      "aliases": ["d"],
+      "description": "📝 Recent decisions - View architectural choices (default: 7 days)",
+      "action": "python3 admin/scripts/query_context.py --command decisions --days",
+      "category": "decisions",
+      "parameters": ["days"],
+      "defaults": {"days": 7},
+      "usage": "%decisions [days]",
+      "example": "%d 14"
+    },
+    "log": {
+      "aliases": ["l"],
+      "description": "✍️ Log decision - Record important architectural choices",
+      "action": "python3 admin/scripts/log_decision.py --type decision",
+      "category": "decisions",
+      "parameters": ["title", "description", "project"],
+      "required": ["title", "description", "project"],
+      "usage": "%log \"title\" \"description\" \"project\"",
+      "example": "%l \"Use React\" \"Better ecosystem\" caia"
+    },
+    "progress": {
+      "aliases": ["p"],
+      "description": "📈 Log progress - Track task completion and milestones",
+      "action": "python3 admin/scripts/log_decision.py --type progress",
+      "category": "decisions",
+      "parameters": ["title", "project", "completion"],
+      "required": ["title", "project", "completion"],
+      "usage": "%progress \"title\" \"project\" completion%",
+      "example": "%p \"Auth done\" roulette-community 100"
+    },
+    "discussion": {
+      "aliases": ["disc"],
+      "description": "💬 Log discussion - Document team meetings and decisions",
+      "action": "python3 admin/scripts/log_decision.py --type discussion",
+      "category": "decisions",
+      "parameters": ["title", "description", "project"],
+      "required": ["title", "description", "project"],
+      "usage": "%discussion \"title\" \"description\" \"project\"",
+      "example": "%disc \"Sprint planning\" \"Decided on 2-week sprints\" caia"
+    },
+    "context": {
+      "aliases": ["ctx"],
+      "description": "🔄 Capture context - Manual snapshot of project state",
+      "action": "python3 admin/scripts/capture_context.py --hours",
+      "category": "context",
+      "parameters": ["hours"],
+      "defaults": {"hours": 1},
+      "usage": "%context [hours]",
+      "example": "%ctx 24"
+    },
+    "daemon": {
+      "aliases": [],
+      "description": "👹 Daemon status - Check if context daemon is running",
+      "action": "ps aux | grep capture_context.py | grep -v grep",
+      "category": "context",
+      "usage": "%daemon",
+      "example": "%daemon"
+    },
+    "daemon-start": {
+      "aliases": [],
+      "description": "🚀 Start daemon - Begin hourly context captures",
+      "action": "admin/scripts/start_context_daemon.sh",
+      "category": "context",
+      "usage": "%daemon-start",
+      "example": "%daemon-start"
+    },
+    "daemon-stop": {
+      "aliases": [],
+      "description": "🛑 Stop daemon - Stop automatic context captures",
+      "action": "admin/scripts/stop_context_daemon.sh",
+      "category": "context",
+      "usage": "%daemon-stop",
+      "example": "%daemon-stop"
+    },
+    "monitor": {
+      "aliases": ["mon"],
+      "description": "👁️ Real-time monitor - Watch for issues continuously",
+      "action": "python3 admin/scripts/realtime_monitor.py --watch",
+      "category": "quality",
+      "usage": "%monitor",
+      "example": "%monitor"
+    },
+    "scan": {
+      "aliases": [],
+      "description": "🔍 Project scan - One-time check for issues",
+      "action": "python3 admin/scripts/realtime_monitor.py --scan",
+      "category": "quality",
+      "usage": "%scan",
+      "example": "%scan"
+    },
+    "qa": {
+      "aliases": [],
+      "description": "✅ QA check - Run quality assurance on all projects",
+      "action": "python3 admin/scripts/qa_automation.py --all",
+      "category": "quality",
+      "usage": "%qa",
+      "example": "%qa"
+    },
+    "qa-fix": {
+      "aliases": ["fix"],
+      "description": "🔧 Auto-fix - Automatically fix linting and format issues",
+      "action": "python3 admin/scripts/qa_automation.py --fix",
+      "category": "quality",
+      "usage": "%qa-fix",
+      "example": "%qa-fix"
+    },
+    "security": {
+      "aliases": ["sec"],
+      "description": "🛡️ Security scan - Check for vulnerabilities and CVEs",
+      "action": "python3 admin/scripts/qa_automation.py --security",
+      "category": "quality",
+      "usage": "%security",
+      "example": "%security"
+    },
+    "deps": {
+      "aliases": ["dependencies"],
+      "description": "📦 Dependencies - Check for outdated packages",
+      "action": "python3 admin/scripts/daily_update_check.py --deps-only",
+      "category": "updates",
+      "usage": "%deps",
+      "example": "%deps"
+    },
+    "tracker": {
+      "aliases": ["track"],
+      "description": "📍 CAIA tracker - Component tracking and publication status",
+      "action": "python3 admin/scripts/caia_tracker.py",
+      "category": "caia",
+      "usage": "%tracker",
+      "example": "%tracker"
+    },
+    "roadmap": {
+      "aliases": ["road"],
+      "description": "🗺️ CAIA roadmap - Development priorities and timeline",
+      "action": "python3 admin/scripts/caia_tracker.py --roadmap",
+      "category": "caia",
+      "usage": "%roadmap",
+      "example": "%roadmap"
+    },
+    "components": {
+      "aliases": ["comp"],
+      "description": "🧩 Components - List all CAIA components and status",
+      "action": "python3 admin/scripts/caia_tracker.py --report",
+      "category": "caia",
+      "usage": "%components",
+      "example": "%components"
+    },
+    "update": {
+      "aliases": ["up"],
+      "description": "🔄 Daily update - Check for package updates and apply",
+      "action": "python3 admin/scripts/daily_update_check.py",
+      "category": "updates",
+      "usage": "%update",
+      "example": "%update"
+    },
+    "news": {
+      "aliases": [],
+      "description": "📰 Tech news - Latest trends and GitHub trending repos",
+      "action": "python3 admin/scripts/daily_update_check.py --news-only",
+      "category": "updates",
+      "usage": "%news",
+      "example": "%news"
+    },
+    "ccu": {
+      "aliases": [],
+      "description": "⚡ CCU status - CC Ultimate integration status",
+      "action": "admin/scripts/test_ccu_integration.sh",
+      "category": "performance",
+      "usage": "%ccu",
+      "example": "%ccu"
+    },
+    "cco": {
+      "aliases": [],
+      "description": "🚀 CCO status - CC Orchestrator parallel execution status",
+      "action": "admin/scripts/test_cco_integration.sh",
+      "category": "performance",
+      "usage": "%cco",
+      "example": "%cco"
+    },
+    "project": {
+      "aliases": ["proj"],
+      "description": "📁 Project info - Get specific project summary",
+      "action": "python3 admin/scripts/query_context.py --command project --project",
+      "category": "projects",
+      "parameters": ["project_name"],
+      "required": ["project_name"],
+      "usage": "%project <name>",
+      "example": "%project caia"
+    },
+    "todos": {
+      "aliases": ["todo"],
+      "description": "📝 TODOs - List all TODOs across projects",
+      "action": "grep -r 'TODO\\|FIXME\\|HACK' /Users/MAC/Documents/projects --include='*.py' --include='*.js' --include='*.ts' | head -20",
+      "category": "projects",
+      "usage": "%todos",
+      "example": "%todos"
+    },
+    "menu": {
+      "aliases": ["m"],
+      "description": "📋 Menu - Interactive admin command center",
+      "action": "admin/scripts/admin_menu.sh",
+      "category": "utilities",
+      "usage": "%menu",
+      "example": "%menu"
+    },
+    "dashboard": {
+      "aliases": ["dash"],
+      "description": "📊 Dashboard - Full admin dashboard view",
+      "action": "python3 admin/scripts/admin_dashboard.py",
+      "category": "utilities",
+      "usage": "%dashboard",
+      "example": "%dashboard"
+    },
+    "health": {
+      "aliases": ["h"],
+      "description": "💚 Health check - System health indicators",
+      "action": "python3 admin/scripts/admin_dashboard.py --health",
+      "category": "utilities",
+      "usage": "%health",
+      "example": "%health"
+    },
+    "help": {
+      "aliases": ["?"],
+      "description": "❓ Help - Show all commands with descriptions",
+      "action": "show_help",
+      "category": "utilities",
+      "usage": "%help",
+      "example": "%help"
+    },
+    "progress-today": {
+      "aliases": ["pt"],
+      "description": "📈 Today's Progress - View progress for current repo",
+      "action": "python3 admin/scripts/progress_logger.py today",
+      "category": "progress",
+      "usage": "%progress-today",
+      "example": "%pt"
+    },
+    "progress-week": {
+      "aliases": ["pw"],
+      "description": "📅 Weekly Progress - View this week's progress summary",
+      "action": "python3 admin/scripts/progress_logger.py week",
+      "category": "progress",
+      "usage": "%progress-week",
+      "example": "%pw"
+    },
+    "progress-repo": {
+      "aliases": ["pr"],
+      "description": "📁 Repo Progress - View specific repository progress",
+      "action": "python3 admin/scripts/ecosystem_progress_dashboard.py project --project",
+      "category": "progress",
+      "parameters": ["repo_name"],
+      "required": ["repo_name"],
+      "usage": "%progress-repo <repo>",
+      "example": "%pr caia"
+    },
+    "progress-caia": {
+      "aliases": ["pc"],
+      "description": "🎯 CAIA Progress - CAIA monorepo aggregated progress",
+      "action": "python3 admin/scripts/caia_progress_aggregator.py status",
+      "category": "progress",
+      "usage": "%progress-caia",
+      "example": "%pc"
+    },
+    "progress-ecosystem": {
+      "aliases": ["pe"],
+      "description": "🌍 Ecosystem Progress - All projects combined dashboard",
+      "action": "python3 admin/scripts/ecosystem_progress_dashboard.py dashboard",
+      "category": "progress",
+      "usage": "%progress-ecosystem",
+      "example": "%pe"
+    },
+    "log-progress": {
+      "aliases": ["lp"],
+      "description": "✍️ Log Progress - Quick accomplishment logging",
+      "action": "python3 admin/scripts/progress_logger.py add",
+      "category": "progress",
+      "parameters": ["title", "description", "type", "complexity", "impact"],
+      "required": ["title", "description"],
+      "defaults": {"type": "feature", "complexity": "medium", "impact": "medium"},
+      "usage": "%log-progress \"title\" \"description\" [type] [complexity] [impact]",
+      "example": "%lp \"Fixed auth bug\" \"Resolved race condition\""
+    },
+    "progress-trends": {
+      "aliases": ["trends"],
+      "description": "📊 Progress Trends - Velocity and trend analysis",
+      "action": "python3 admin/scripts/ecosystem_progress_dashboard.py weekly",
+      "category": "progress",
+      "usage": "%progress-trends",
+      "example": "%trends"
+    },
+    "progress-blockers": {
+      "aliases": ["blockers"],
+      "description": "🚫 Progress Blockers - Current blockers across projects",
+      "action": "python3 admin/scripts/progress_logger.py block",
+      "category": "progress",
+      "parameters": ["title", "impact", "plan"],
+      "required": ["title", "impact"],
+      "usage": "%progress-blockers \"blocker\" \"impact\" [plan]",
+      "example": "%blockers \"API down\" \"Blocks all auth features\""
+    },
+    "progress-milestones": {
+      "aliases": ["milestones"],
+      "description": "🎯 Progress Milestones - Milestone tracking across projects",
+      "action": "python3 admin/scripts/caia_progress_aggregator.py rollup",
+      "category": "progress",
+      "usage": "%progress-milestones",
+      "example": "%milestones"
+    },
+    "publish-progress": {
+      "aliases": ["publish"],
+      "description": "🌐 Publish Progress - Commit progress to GitHub Pages",
+      "action": "python3 admin/scripts/progress_to_web.py publish-repo --repo",
+      "category": "progress",
+      "parameters": ["repo_name"],
+      "required": ["repo_name"],
+      "usage": "%publish-progress <repo>",
+      "example": "%publish caia"
+    },
+    "publish-all": {
+      "aliases": ["pub-all"],
+      "description": "🌍 Publish All - Commit all repos progress to GitHub Pages",
+      "action": "python3 admin/scripts/progress_to_web.py publish-all",
+      "category": "progress",
+      "usage": "%publish-all",
+      "example": "%pub-all"
+    },
+    "publish-caia": {
+      "aliases": ["pub-caia"],
+      "description": "🎯 Publish CAIA - Commit CAIA aggregated progress",
+      "action": "python3 admin/scripts/progress_to_web.py publish-caia",
+      "category": "progress",
+      "usage": "%publish-caia",
+      "example": "%pub-caia"
+    }
+  },
+  "categories": {
+    "monitoring": "📊 Status & Monitoring",
+    "decisions": "📝 Decision Management",
+    "context": "🔄 Context Management",
+    "quality": "✅ Quality & Security",
+    "caia": "🎯 CAIA Management",
+    "updates": "🔄 Updates & News",
+    "performance": "⚡ Performance",
+    "projects": "📁 Project Management",
+    "progress": "📈 Progress Tracking",
+    "utilities": "🛠️ Utilities"
+  }
+}

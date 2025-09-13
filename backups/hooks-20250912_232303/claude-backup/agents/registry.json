@@ -1,0 +1,19 @@
+{
+  "jira-connect": {
+    "name": "jira-connect",
+    "description": "MCP-based Jira integration agent for all Jira operations",
+    "path": "/Users/MAC/.claude/agents/jira-connect",
+    "type": "mcp",
+    "global": true,
+    "priority": 100,
+    "triggers": [
+      "jira",
+      "create issue",
+      "update issue",
+      "search issues",
+      "epic",
+      "story",
+      "task"
+    ]
+  }
+}

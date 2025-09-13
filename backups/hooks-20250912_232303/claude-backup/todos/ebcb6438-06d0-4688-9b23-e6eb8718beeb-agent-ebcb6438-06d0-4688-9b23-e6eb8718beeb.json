@@ -1,0 +1,22 @@
+[
+  {
+    "content": "Create architectural initiatives with epics in Jira",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Create technical initiatives with epics in Jira",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Create functionality initiatives with epics in Jira",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Set up Jira project structure and configurations",
+    "status": "completed",
+    "id": "4"
+  }
+]

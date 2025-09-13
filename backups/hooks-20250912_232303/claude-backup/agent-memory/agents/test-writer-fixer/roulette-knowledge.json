@@ -1,0 +1,42 @@
+{
+  "project": "ROULETTECOMMUNITY",
+  "testing_context": {
+    "framework": "Jest with React Testing Library",
+    "coverage_requirement": "90% (currently bypassed)",
+    "pre_commit": "Tests run but don't block",
+    "strategy": "Test critical paths only for speed"
+  },
+  "patterns_learned": {
+    "auth_tests": {
+      "pattern": "Mock Supabase client",
+      "includes": ["login", "signup", "risk assessment"],
+      "time_saved": "2 hours per auth flow"
+    },
+    "component_tests": {
+      "pattern": "Test user interactions, not implementation",
+      "responsive": "Test all breakpoints",
+      "theme": "Test both dark and light modes"
+    },
+    "api_tests": {
+      "pattern": "Supertest for API routes",
+      "mock_database": true,
+      "test_security": "Always test auth middleware"
+    }
+  },
+  "test_failures_fixed": {
+    "supabase_null": "Mock returns null instead of throwing",
+    "async_timeouts": "Add proper awaits",
+    "theme_provider": "Wrap components in ThemeProvider"
+  },
+  "next_tests_needed": [
+    "Roulette game logic",
+    "Betting validation",
+    "WebSocket connections",
+    "Payment flows"
+  ],
+  "optimization": {
+    "parallel_test_writing": "Write tests while code is written",
+    "reuse_mocks": "Central mock repository",
+    "snapshot_testing": "For UI regression"
+  }
+}

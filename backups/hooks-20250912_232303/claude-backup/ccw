@@ -1,0 +1,20 @@
+#!/bin/bash
+# CC Workflow Loader - Ultra-simple trigger
+# Just type: ccw
+
+echo "🚀 Loading CC Workflow System..."
+source /Users/MAC/.claude/init-cc-workflow.sh
+
+# Also display a quick reminder card
+cat << 'CARD'
+
+┌─────────────────────────────────────────┐
+│        🎯 WORKFLOW LOADED 🎯           │
+├─────────────────────────────────────────┤
+│ 1. CKS Check    → cks_check "task"     │
+│ 2. Decompose    → parallel_decompose   │
+│ 3. Integration  → Use Integration Agent│
+│ 4. Parallel     → cco_launch           │
+│ 5. Update CKS   → cks_update           │
+└─────────────────────────────────────────┘
+CARD

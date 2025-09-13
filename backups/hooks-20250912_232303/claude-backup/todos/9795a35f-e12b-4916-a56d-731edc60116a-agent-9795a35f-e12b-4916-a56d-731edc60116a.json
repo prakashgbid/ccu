@@ -1,0 +1,27 @@
+[
+  {
+    "content": "Analyze current project status and incomplete features",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Create core roulette game engine component",
+    "status": "in_progress",
+    "id": "2"
+  },
+  {
+    "content": "Set up real-time WebSocket integration for live gameplay",
+    "status": "pending",
+    "id": "3"
+  },
+  {
+    "content": "Implement payment processing with Stripe",
+    "status": "pending",
+    "id": "4"
+  },
+  {
+    "content": "Test and validate all implementations",
+    "status": "pending",
+    "id": "5"
+  }
+]

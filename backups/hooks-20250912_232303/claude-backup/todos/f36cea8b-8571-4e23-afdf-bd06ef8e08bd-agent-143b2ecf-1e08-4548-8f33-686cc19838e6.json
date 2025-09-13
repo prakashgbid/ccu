@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Fix TypeScript error in Stripe client (apiVersion mismatch)",
+    "status": "completed",
+    "id": "1"
+  },
+  {
+    "content": "Fix failing gameStore tests",
+    "status": "completed",
+    "id": "2"
+  },
+  {
+    "content": "Complete WebSocket integration (30% remaining)",
+    "status": "completed",
+    "id": "3"
+  },
+  {
+    "content": "Increase test coverage from 65% to 80%",
+    "status": "completed",
+    "id": "4"
+  },
+  {
+    "content": "Clean up temporary files and commit Sprint 1 completion",
+    "status": "completed",
+    "id": "5"
+  },
+  {
+    "content": "Prepare Sprint 2 kickoff with payment integration",
+    "status": "completed",
+    "id": "6"
+  }
+]

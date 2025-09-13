@@ -1,0 +1,62 @@
+[
+  {
+    "content": "SPRINT 1 (Days 1-6): Legal Compliance Foundation - Implement sweepstakes model, age verification, geo-blocking, terms of service, and educational disclaimers",
+    "status": "pending",
+    "id": "sprint1-legal-foundation"
+  },
+  {
+    "content": "SPRINT 1: Dual Currency System - Build Gems (purchasable) and Coins (sweepstakes) with clear separation and compliance tracking",
+    "status": "pending",
+    "id": "sprint1-dual-currency"
+  },
+  {
+    "content": "SPRINT 1: Educational Roulette Core - Basic roulette gameplay with educational tooltips, strategy guides, and practice mode",
+    "status": "pending",
+    "id": "sprint1-basic-roulette"
+  },
+  {
+    "content": "SPRINT 2 (Days 7-12): Social & Viral Features - Friends system, leaderboards, social sharing, referral program with rewards",
+    "status": "pending",
+    "id": "sprint2-social-features"
+  },
+  {
+    "content": "SPRINT 2: Premium Subscription Tiers - VIP status, exclusive tables, bonus multipliers, priority support ($25M revenue driver)",
+    "status": "pending",
+    "id": "sprint2-premium-subscriptions"
+  },
+  {
+    "content": "SPRINT 2: Stripe Integration - Gem purchases, subscription billing, transaction tracking, refund handling",
+    "status": "pending",
+    "id": "sprint2-payment-integration"
+  },
+  {
+    "content": "SPRINT 3 (Days 13-18): Advanced Gameplay - Multiple table types, tournaments, daily challenges, streak bonuses",
+    "status": "pending",
+    "id": "sprint3-advanced-gameplay"
+  },
+  {
+    "content": "SPRINT 3: Creator Economy Foundation - User-generated content, custom tables, revenue sharing for creators ($10M revenue driver)",
+    "status": "pending",
+    "id": "sprint3-creator-economy"
+  },
+  {
+    "content": "SPRINT 3: Analytics & Optimization - User behavior tracking, A/B testing framework, conversion funnel analysis",
+    "status": "pending",
+    "id": "sprint3-analytics-optimization"
+  },
+  {
+    "content": "SPRINT 4 (Days 19-24): Monetization Optimization - Dynamic pricing, personalized offers, commission system for transactions ($20M revenue driver)",
+    "status": "pending",
+    "id": "sprint4-monetization-optimization"
+  },
+  {
+    "content": "SPRINT 4: Advertising Platform - Sponsored content integration, brand partnerships, native advertising ($5M revenue driver)",
+    "status": "pending",
+    "id": "sprint4-advertising-platform"
+  },
+  {
+    "content": "SPRINT 4: Retention & Engagement - Daily login rewards, achievement system, personalized recommendations, push notifications",
+    "status": "pending",
+    "id": "sprint4-retention-features"
+  }
+]

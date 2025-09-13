@@ -1,0 +1,46 @@
+#!/bin/bash
+# Master CC Learning Integration Hook
+# Ensures all learning systems are connected and active
+
+echo "🧠 CC Learning System Integration Active"
+
+# 1. Ensure all APIs are running
+APIS=(
+    "5555:cks-api-bridge.py:CKS API"
+    "5002:cc-enhancement-daemon.py:Enhancement Systems"
+    "5003:unified-learning-api.py:Learning System"
+)
+
+for API in "${APIS[@]}"; do
+    IFS=':' read -r PORT SCRIPT NAME <<< "$API"
+    
+    if ! curl -s http://localhost:$PORT/health > /dev/null 2>&1; then
+        echo "  Starting $NAME..."
+        cd /Users/MAC/Documents/projects/caia/knowledge-system
+        nohup python3 $SCRIPT > /tmp/$SCRIPT.log 2>&1 &
+        sleep 2
+    fi
+done
+
+# 2. Export environment variables
+export CKS_API_URL="http://localhost:5555"
+export ENHANCEMENT_API_URL="http://localhost:5002"
+export LEARNING_API_URL="http://localhost:5003"
+export CKS_ENFORCEMENT=MANDATORY
+export CC_LEARNING_ENABLED=true
+
+# 3. Test integration
+QUERY_RESULT=$(curl -s -X POST http://localhost:5003/query     -H "Content-Type: application/json"     -d '{"query": "test"}' 2>/dev/null)
+
+if [ ! -z "$QUERY_RESULT" ]; then
+    echo "✅ Learning system fully integrated"
+else
+    echo "⚠️  Learning system starting up..."
+fi
+
+# 4. Enable hooks
+export CC_CAPTURE_PROMPTS=true
+export CC_CAPTURE_RESPONSES=true
+export CC_LEARN_FROM_INTERACTIONS=true
+
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
