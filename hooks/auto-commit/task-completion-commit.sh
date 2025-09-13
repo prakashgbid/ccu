@@ -166,6 +166,13 @@ main() {
         if echo "$CLAUDE_TOOL_INPUT" | grep -q '"status":"completed"'; then
             log "Detected completed task(s)"
             
+            # Console output for visibility
+            echo "╔══════════════════════════════════════════╗" >&2
+            echo "║ 🪝 HOOK: task-completion-commit          ║" >&2
+            echo "║ ✅ TRIGGER: Task marked complete         ║" >&2
+            echo "║ 🔄 ACTION: Auto-committing changes       ║" >&2
+            echo "╚══════════════════════════════════════════╝" >&2
+            
             # Process all project directories
             for project_dir in /Users/MAC/Documents/projects/*/; do
                 if [ -d "$project_dir/.git" ]; then
