@@ -37,6 +37,13 @@ case "$TOOL_NAME" in
         ;;
 esac
 
+# Console output for visibility (only for write operations)
+echo "┌──────────────────────────────────────────┐" >&2
+echo "│ 🪝 HOOK: auto-commit-hook                │" >&2
+echo "│ 🔧 TOOL: $TOOL_NAME" | head -c 44 | awk '{printf "%-44s│\n", $0}' >&2
+echo "│ 🔄 ACTION: Checking for uncommitted code │" >&2
+echo "└──────────────────────────────────────────┘" >&2
+
 # Function to check if we should commit
 should_commit() {
     local project_dir="$1"
@@ -97,6 +104,7 @@ auto_commit() {
     local project_name=$(basename "$project_dir")
     
     log "Starting auto-commit for $project_name"
+    echo "  📦 Auto-committing in: $project_name" >&2
     
     # Get current branch
     local current_branch=$(git -C "$project_dir" rev-parse --abbrev-ref HEAD)
